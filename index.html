@@ -731,6 +731,39 @@
         gap: 2.5rem;
       }
     }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img {
+      max-width: 92vw;
+      max-height: 92vh;
+      object-fit: contain;
+      box-shadow: 0 0 60px rgba(0,0,0,0.8);
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      color: #fff;
+      font-size: 2rem;
+      font-family: 'DM Mono', monospace;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .photo-cell img { cursor: zoom-in; }
   </style>
 </head>
 <body>
@@ -943,7 +976,7 @@
     </div>
     <p class="photo-intro">A selection of documentary, portrait, and editorial work. Replace the placeholders below with your best images.</p>
     <div class="photo-mosaic">
-      <div class="photo-cell featured"> <img scr = "images/FB_IMG_1771487184104.jpg" alt="BLM protest at Minnesota State Capitol, 2020" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="photo-cell featured"> <img src="images/FB_IMG_1771487184104.jpg" alt="BLM protest at Minnesota State Capitol, 2020" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="photo-cell">
         <img src="images/Vice and Virtue 2.jpg" alt="Vice and Virtue — opioid crisis editorial" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -955,7 +988,7 @@
         <img src="images/vietmemorial.jpg" alt="Vietnam Veterans Memorial at dawn, Washington D.C." style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="photo-cell">
-        <img src="images/neworleansone.jpg" alt="French Quarter at night, New Orleans" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="images/neworleansthree.jpg" alt="French Quarter at night, New Orleans" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
     </div>
 
@@ -991,5 +1024,37 @@
     <p>AI Specialist · Technical Writer · Curriculum Designer · AI Ethicist · Photojournalist</p>
   </footer>
 
+
+  <!-- ─── LIGHTBOX ─── -->
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">✕</span>
+    <img src="" alt="" id="lightbox-img">
+  </div>
+
+  <script>
+    const overlay = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.photo-cell img').forEach(img => {
+      img.addEventListener('click', e => {
+        e.stopPropagation();
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    overlay.addEventListener('click', closeLightbox);
+    lbClose.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
 </body>
 </html>
