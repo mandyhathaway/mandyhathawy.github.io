@@ -177,17 +177,25 @@
       margin-bottom: 0.5rem;
     }
 
-    /* ─── HERO PULL QUOTE ─── */
+    /* ─── HEADSHOT ─── */
+
+    /* ─── HERO / ABOUT ─── */
     .hero {
       padding: 5rem 5vw;
       display: grid;
       grid-template-columns: 1fr 2px 1fr;
       gap: 0 4rem;
-      align-items: center;
+      align-items: start;
       border-bottom: 1px solid var(--rule);
     }
 
-    .hero-rule { background: var(--rule); height: 100%; }
+    .hero-rule { background: var(--rule); height: 100%; min-height: 400px; }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     .hero-quote {
       font-family: 'Playfair Display', serif;
@@ -205,6 +213,36 @@
       vertical-align: -2rem;
       color: var(--accent);
       margin-right: 0.15rem;
+    }
+
+    .headshot-slot {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-width: 320px;
+      background: var(--cream);
+      border: 1px dashed var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--muted);
+    }
+
+    .headshot-slot span {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.88rem;
+    }
+
+    .headshot-slot small {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 1rem;
+      line-height: 1.6;
     }
 
     .hero-bio {
@@ -644,6 +682,7 @@
         gap: 2rem 0;
       }
       .hero-rule { display: none; }
+      .headshot-slot { max-width: 200px; }
 
       .photo-mosaic {
         grid-template-columns: 1fr 1fr;
@@ -674,7 +713,7 @@
     </div>
     <div class="masthead-name">
       <h1>Mandy <em>Hathaway</em></h1>
-      <p class="tagline">AI Specialist &nbsp;·&nbsp; Technical Writer &nbsp;·&nbsp; Curriculum Designer &nbsp;·&nbsp;  AI Ethicist</p>
+      <p class="tagline">AI Specialist &nbsp;·&nbsp; Technical Writer &nbsp;·&nbsp; Curriculum Designer &nbsp;·&nbsp; Photographer &nbsp;·&nbsp; AI Ethicist</p>
     </div>
   </header>
 
@@ -707,9 +746,15 @@
 
   <!-- ─── ABOUT / HERO ─── -->
   <section id="about" class="hero">
-    <blockquote class="hero-quote">
-      I build and explore AI systems, and I explain them — to learners, to organizations, and to anyone who wants to know how they work and why it matters.
-    </blockquote>
+    <div class="hero-left">
+      <blockquote class="hero-quote">
+        I build and explore AI systems, and I explain them — to learners, to organizations, and to anyone who wants to know how they work and why it matters.
+      </blockquote>
+      <div class="headshot-slot">
+        <span>Your Photo Here</span>
+        <small>Replace with &lt;img src="headshot.jpg"&gt;</small>
+      </div>
+    </div>
     <div class="hero-rule"></div>
     <div class="hero-bio">
       <p>I'm Mandy Hathaway — a remote technology instructor, AI specialist, and programmer. I hold two degrees from Metropolitan State University: an MA in Ethical Technology &amp; Artificial Intelligence, and a BA in Philosophy. I've spent 15+ years teaching coding, building curriculum, and thinking critically about the systems I work with.</p>
@@ -827,7 +872,7 @@
         </div>
       </div>
     </div>
-    <p class="photo-note">→ To add photos: replace the .photo-cell-inner elements with &lt;img&gt; tags pointing to your image files.</p>
+    <p class="photo-note">→ To add your photos: replace the .photo-cell-inner elements with &lt;img&gt; tags pointing to your image files.</p>
   </section>
 
   <!-- ─── AI ETHICS ─── -->
@@ -912,4 +957,9 @@
 
   <!-- ─── FOOTER ─── -->
   <footer>
-    <p>© 202
+    <p>© 2026 Mandy Hathaway — All Rights Reserved</p>
+    <p>AI Specialist · Technical Writer · Curriculum Designer · Photographer · AI Ethicist</p>
+  </footer>
+
+</body>
+</html></
