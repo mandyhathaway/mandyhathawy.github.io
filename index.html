@@ -142,6 +142,7 @@
       .photo-cell:first-child { grid-row: auto; }
       .article-row { grid-template-columns: 1fr; gap: 0.3rem; }
       #contact { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ethics-featured-grid { grid-template-columns: 1fr !important; }
     }
     .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; }
     .lightbox-overlay.active { display: flex; }
@@ -302,31 +303,23 @@
       <p>I write and think critically about the human dimensions of artificial intelligence — from bias and accountability to how we design systems that are genuinely equitable. Below is a selection of essays, research, and public writing on these questions.</p>
     </div>
 
-    <!-- FEATURED ESSAY -->
-    <div class="ethics-featured">
-      <div class="ethics-tag">Featured Essay</div>
-      <h3>The Bias We're Building In</h3>
-      <p>AI systems don't generate bias from nowhere — they learn it from us. This essay traces how racial and gender inequity becomes encoded in machine learning systems, why removing sensitive variables from training data isn't enough, and what it actually takes to build systems that don't perpetuate the injustices they inherit. Drawn from graduate research in ethical AI and informed by cases including COMPAS, Word2Vec, and the Google Ethical AI team's collapse.</p>
-      <a href="samples/AI_Ethics_Essay_Hathaway_v2.docx" class="ethics-link" target="_blank">Read the Essay (DOCX) &rarr;</a>
+    <!-- FEATURED ESSAYS -->
+    <div style="margin: 2.5rem 5vw 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <div class="ethics-featured" style="margin: 0;">
+        <div class="ethics-tag">Featured Essay</div>
+        <h3>The Bias We're Building In</h3>
+        <p>AI systems don't generate bias from nowhere — they learn it from us. This essay traces how racial and gender inequity becomes encoded in machine learning systems, why removing sensitive variables isn't enough, and what it actually takes to build systems that don't perpetuate the injustices they inherit.</p>
+        <a href="samples/AI_Ethics_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
+      </div>
+      <div class="ethics-featured" style="margin: 0;">
+        <div class="ethics-tag">Featured Essay</div>
+        <h3>We Built the Monster We're Afraid Of</h3>
+        <p>Why fears of AI apocalypse say more about human psychology than AI capability — and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
+        <a href="samples/Anthropomorphism_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
+      </div>
     </div>
 
     <div class="journalism-list">
-      <div class="article-row">
-        <div class="article-date">2022</div>
-        <div class="article-body">
-          <h3>The Bias We're Building In</h3>
-          <p>How AI systems inherit and amplify the inequalities of the world they learn from — and why fixing that requires more than better data. <a href="samples/AI_Ethics_Essay_Final.pdf" target="_blank" style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.08em;">Download PDF &rarr;</a></p>
-        </div>
-        <div class="article-pub">Featured</div>
-      </div>
-      <div class="article-row">
-        <div class="article-date">Oct 2024</div>
-        <div class="article-body">
-          <h3>On Algorithmic Accountability: A Framework for the Classroom</h3>
-          <p>How instructional design can help learners engage critically with AI systems they encounter daily.</p>
-        </div>
-        <div class="article-pub">Ed. Review</div>
-      </div>
       <div class="article-row">
         <div class="article-date">Aug 2024</div>
         <div class="article-body">
