@@ -88,7 +88,7 @@
     .section-header .rule-line { flex: 1; height: 1px; background: var(--rule); }
     .section-header .section-num { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
     #writing { padding-bottom: 4rem; border-bottom: 1px solid var(--rule); }
-    .writing-grid { padding: 2.5rem 5vw 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0; max-width: 1100px; margin: 0 auto; }
+    .writing-grid { padding: 2.5rem 5vw 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 1400px; margin: 0 auto; }
     .writing-card { padding: 2rem; border: 1px solid var(--rule); margin: -1px -1px 0 0; transition: background 0.2s; cursor: default; }
     .writing-card:hover { background: var(--cream); }
     .writing-card .card-type { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
@@ -136,6 +136,8 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .masthead-name { animation: fadeUp 0.8s ease forwards; }
     .hero { animation: fadeUp 0.8s 0.2s ease both; }
+    @media (max-width: 1100px) { .writing-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .writing-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; gap: 2rem 0; }
       .hero-rule { display: none; }
@@ -291,6 +293,18 @@
         <h3>Prompt Engineering Library</h3>
         <p>A structured reference library of prompts for common AI use cases: classification, summarization, content moderation, structured output, and edge case handling. Includes design notes explaining the reasoning behind each approach.</p>
         <a href="samples/Prompt_Engineering_Library_Hathaway.pdf" class="card-link" target="_blank">Read PDF &rarr;</a>
+      </div>
+      <div class="writing-card" style="opacity: 0.65; border-style: dashed;">
+        <div class="card-type" style="color: var(--muted);">Installation Guide &nbsp;&middot;&nbsp; Coming Soon</div>
+        <h3>How to Host a Static Site on GitHub Pages</h3>
+        <p>A step-by-step installation guide for developers and technical writers deploying a static site with GitHub Pages. Covers repository setup, branch configuration, deployment, verification, and common troubleshooting scenarios. No prior GitHub Pages experience required.</p>
+        <span style="display:inline-block; margin-top:1rem; font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); border:1px solid var(--rule); padding:0.3rem 0.7rem;">Available in the next few days</span>
+      </div>
+      <div class="writing-card" style="opacity: 0.65; border-style: dashed;">
+        <div class="card-type" style="color: var(--muted);">User Guide &nbsp;&middot;&nbsp; Coming Soon</div>
+        <h3>How to Run a Local LLM with Ollama</h3>
+        <p>A practical user guide for running large language models entirely on your own machine using Ollama. Covers installation, model selection, pulling and running models, prompt experimentation, and programmatic access via the local REST API. Written for technically curious users who want full control over their AI tools without sending data to an external API.</p>
+        <span style="display:inline-block; margin-top:1rem; font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); border:1px solid var(--rule); padding:0.3rem 0.7rem;">Available in the next few days</span>
       </div>
     </div>
   </section>
