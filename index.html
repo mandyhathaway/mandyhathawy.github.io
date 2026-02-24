@@ -442,10 +442,25 @@
         <a href="samples/Mandy_Hathaway_Resume_2pg.pdf" target="_blank">Download Résumé (PDF)</a>
       </div>
     </div>
-    <div class="contact-right" style="display:flex; flex-direction:column; justify-content:center;">
-      <p style="font-family:'Playfair Display',serif; font-size:clamp(1.4rem,3vw,2.2rem); font-weight:700; line-height:1.3; color:var(--ink); margin-bottom:1.2rem;">The best way to reach me is directly.</p>
-      <p style="font-family:'Libre Baskerville',serif; font-size:0.95rem; color:var(--muted); line-height:1.8; margin-bottom:1.8rem;">Drop me a note at <a href="mailto:mandyhathaway@proton.me" style="color:var(--accent); text-decoration:none;">mandyhathaway@proton.me</a> with a bit about the role or project and I'll get back to you promptly.</p>
-      <a href="mailto:mandyhathaway@proton.me" style="display:inline-block; padding:0.75rem 2rem; background:var(--ink); color:var(--paper); font-family:'DM Mono',monospace; font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; align-self:flex-start; transition:background 0.2s;" onmouseover="this.style.background='#3a5c20'" onmouseout="this.style.background='#1e2a1f'">Send Me an Email &rarr;</a>
+    <div class="contact-right">
+      <div style="margin-bottom:1.4rem;">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" placeholder="Your name" />
+      </div>
+      <div style="margin-bottom:1.4rem;">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" placeholder="your@email.com" />
+      </div>
+      <div style="margin-bottom:1.4rem;">
+        <label for="cf-subject">What is this about?</label>
+        <input type="text" id="cf-subject" placeholder="Role, contract, collaboration..." />
+      </div>
+      <div style="margin-bottom:1.6rem;">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" placeholder="Tell me a bit about the project or role..."></textarea>
+      </div>
+      <button onclick="handleContactSubmit(event)">Send Message &rarr;</button>
+      <p id="cf-confirmation" style="display:none; margin-top:1rem; font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--accent);">Message sent — I will be in touch shortly.</p>
     </div>
   </section>
 
@@ -479,6 +494,18 @@
     overlay.addEventListener('click', closeLightbox);
     lbClose.addEventListener('click', closeLightbox);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  <script>
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const subject = document.getElementById('cf-subject').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+    if (!name || !email || !message) return;
+    const mailto = `mailto:mandyhathaway@proton.me?subject=${encodeURIComponent(subject || 'Portfolio inquiry')}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+    window.location.href = mailto;
+    document.getElementById('cf-confirmation').style.display = 'block';
+  }
   </script>
 </body>
 </html>
