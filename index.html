@@ -495,16 +495,42 @@
     lbClose.addEventListener('click', closeLightbox);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   <script>
-  function handleContactSubmit(e) {
+  async function handleContactSubmit(e) {
     e.preventDefault();
     const name = document.getElementById('cf-name').value.trim();
     const email = document.getElementById('cf-email').value.trim();
     const subject = document.getElementById('cf-subject').value.trim();
     const message = document.getElementById('cf-message').value.trim();
     if (!name || !email || !message) return;
-    const mailto = `mailto:mandyhathaway@proton.me?subject=${encodeURIComponent(subject || 'Portfolio inquiry')}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
-    window.location.href = mailto;
-    document.getElementById('cf-confirmation').style.display = 'block';
+
+    const btn = e.target;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://formspree.io/f/maqdvray', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject: subject || 'Portfolio inquiry', message })
+      });
+
+      if (res.ok) {
+        document.getElementById('cf-name').value = '';
+        document.getElementById('cf-email').value = '';
+        document.getElementById('cf-subject').value = '';
+        document.getElementById('cf-message').value = '';
+        document.getElementById('cf-confirmation').style.display = 'block';
+        btn.textContent = 'Sent';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send Message →';
+        alert('Something went wrong. Please email me directly at mandyhathaway@proton.me');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'Send Message →';
+      alert('Something went wrong. Please email me directly at mandyhathaway@proton.me');
+    }
   }
   </script>
 </body>
