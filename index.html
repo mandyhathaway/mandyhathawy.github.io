@@ -443,25 +443,25 @@
       </div>
     </div>
     <div class="contact-right">
-      <div style="margin-bottom:1.4rem;">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" placeholder="Your name" />
-      </div>
-      <div style="margin-bottom:1.4rem;">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" placeholder="your@email.com" />
-      </div>
-      <div style="margin-bottom:1.4rem;">
-        <label for="cf-subject">What is this about?</label>
-        <input type="text" id="cf-subject" placeholder="Role, contract, collaboration..." />
-      </div>
-      <div style="margin-bottom:1.6rem;">
-        <label for="cf-message">Message</label>
-        <textarea id="cf-message" placeholder="Tell me a bit about the project or role..."></textarea>
-      </div>
-      <button id="cf-submit" onclick="handleContactSubmit(event)">Send Message &rarr;</button>
-      <p id="cf-error" style="display:none; margin-top:0.8rem; font-family:'DM Mono',monospace; font-size:0.72rem; color:#c0392b;">Please fill in your name, email, and message.</p>
-      <p id="cf-confirmation" style="display:none; margin-top:1rem; font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--accent);">Message sent — I will be in touch shortly.</p>
+      <form action="https://formspree.io/f/maqdvray" method="POST">
+        <div style="margin-bottom:1.4rem;">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div style="margin-bottom:1.4rem;">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div style="margin-bottom:1.4rem;">
+          <label for="cf-subject">What is this about?</label>
+          <input type="text" id="cf-subject" name="subject" placeholder="Role, contract, collaboration..." />
+        </div>
+        <div style="margin-bottom:1.6rem;">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell me a bit about the project or role..." required></textarea>
+        </div>
+        <button type="submit">Send Message &rarr;</button>
+      </form>
     </div>
   </section>
 
@@ -495,58 +495,6 @@
     overlay.addEventListener('click', closeLightbox);
     lbClose.addEventListener('click', closeLightbox);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
-
-  <script>
-  async function handleContactSubmit(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const name = document.getElementById('cf-name').value.trim();
-    const email = document.getElementById('cf-email').value.trim();
-    const subject = document.getElementById('cf-subject').value.trim();
-    const message = document.getElementById('cf-message').value.trim();
-    const errEl = document.getElementById('cf-error');
-    const confirmEl = document.getElementById('cf-confirmation');
-    const btn = document.getElementById('cf-submit');
-
-    errEl.style.display = 'none';
-
-    if (!name || !email || !message) {
-      errEl.style.display = 'block';
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-
-    try {
-      const res = await fetch('https://formspree.io/f/maqdvray', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email, subject: subject || 'Portfolio inquiry', message: message })
-      });
-
-      if (res.ok) {
-        document.getElementById('cf-name').value = '';
-        document.getElementById('cf-email').value = '';
-        document.getElementById('cf-subject').value = '';
-        document.getElementById('cf-message').value = '';
-        confirmEl.style.display = 'block';
-        btn.textContent = 'Sent ✓';
-      } else {
-        btn.disabled = false;
-        btn.textContent = 'Send Message →';
-        errEl.textContent = 'Something went wrong. Please email mandyhathaway@proton.me directly.';
-        errEl.style.display = 'block';
-      }
-    } catch (err) {
-      btn.disabled = false;
-      btn.textContent = 'Send Message →';
-      errEl.textContent = 'Could not connect. Please email mandyhathaway@proton.me directly.';
-      errEl.style.display = 'block';
-    }
-  }
   </script>
 </body>
 </html>
