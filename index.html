@@ -266,16 +266,24 @@
     </div>
     <div class="writing-grid">
       <div class="writing-card">
-        <div class="card-type">Tutorial</div>
-        <h3>How to Use the Anthropic SDK in Your Python Workflow</h3>
-        <p>A developer-focused tutorial on calling Anthropic's models directly from your Python code using the Anthropic SDK. Covers setup, authentication, a practical mid-project use case, and an honest look at when the SDK is the right tool and when it isn't.</p>
-        <a href="https://gist.github.com/mandyhathaway/f5207123af520d509ede55d9a939dc93" class="card-link" target="_blank">Read on GitHub &rarr;</a>
+        <div class="card-type">Annotation Dataset</div>
+        <h3>AI Ethics Preference Annotation Dataset</h3>
+        <p>A fully annotated RLHF preference dataset documenting 95 prompt/response pairs across six AI ethics categories. Each pair includes scores across five dimensions, a named failure mode for the dispreferred response, and a 2&ndash;4 sentence justification citing specific text. Published on Hugging Face.</p>
+        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="card-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="card-link" target="_blank">Hugging Face &rarr;</a>
       </div>
       <div class="writing-card">
         <div class="card-type">Style Guide</div>
         <h3>How We Write About AI</h3>
         <p>A plain-language style guide for writers, editors, and product teams communicating about AI systems to non-specialist audiences. Covers terminology, anthropomorphism, accuracy, bias, and a quick-reference words-to-avoid table.</p>
         <a href="samples/Style_Guide_Sample.pdf" class="card-link" target="_blank">Read (PDF) &rarr;</a>
+      </div>
+      <div class="writing-card">
+        <div class="card-type">Tutorial</div>
+        <h3>How to Use the Anthropic SDK in Your Python Workflow</h3>
+        <p>A developer-focused tutorial on calling Anthropic's models directly from your Python code using the Anthropic SDK. Covers setup, authentication, a practical mid-project use case, and an honest look at when the SDK is the right tool and when it isn't.</p>
+        <a href="https://gist.github.com/mandyhathaway/f5207123af520d509ede55d9a939dc93" class="card-link" target="_blank">Read on GitHub &rarr;</a>
       </div>
       <div class="writing-card">
         <div class="card-type">Prompt Engineering</div>
@@ -302,14 +310,6 @@
         <a href="samples/Technical_Explainer_Final.pdf" class="card-link" target="_blank">Read (PDF) &rarr;</a>
       </div>
       <div class="writing-card">
-        <div class="card-type">Curriculum Design</div>
-        <h3>Probabilities and Confidence</h3>
-        <p>A complete K&ndash;12 AI lesson connecting core probability math to machine learning. Students learn that every AI prediction is rooted in probability, explore how models express certainty through confidence scores, and build a live image classifier using Google&rsquo;s Teachable Machine. Includes full instructor guide and student-facing presentation deck.</p>
-        <a href="samples/Probabilities_and_Confidence_Hathaway.pdf" class="card-link" target="_blank">Instructor Guide (PDF) &rarr;</a>
-        &nbsp;&nbsp;
-        <a href="samples/Probabilities_and_Confidence_Hathaway.pptx" class="card-link" target="_blank">Presentation (PPTX) &rarr;</a>
-      </div>
-      <div class="writing-card">
         <div class="card-type">Instructional Design</div>
         <h3>Build an Image Generation Model</h3>
         <p>An advanced K&ndash;12 lesson in which students build a working Stable Diffusion pipeline from scratch using PyTorch, StableDiffusers, and Google Colab&rsquo;s free GPU. Covers GPU configuration, model loading, prompt engineering, and an optional Gradio web interface extension.</p>
@@ -322,6 +322,14 @@
         <h3>Root Cause Analysis: Content Moderation Model Drift</h3>
         <p>A post-mortem on a fictional AI content moderation failure, tracing how satire content in a training dataset caused a 13-day false positive spike, why validation missed it, and what changed as a result.</p>
         <a href="samples/RCA_Hathaway.pdf" class="card-link" target="_blank">Read PDF &rarr;</a>
+      </div>
+      <div class="writing-card">
+        <div class="card-type">Curriculum Design</div>
+        <h3>Probabilities and Confidence</h3>
+        <p>A complete K&ndash;12 AI lesson connecting core probability math to machine learning. Students learn that every AI prediction is rooted in probability, explore how models express certainty through confidence scores, and build a live image classifier using Google&rsquo;s Teachable Machine. Includes full instructor guide and student-facing presentation deck.</p>
+        <a href="samples/Probabilities_and_Confidence_Hathaway.pdf" class="card-link" target="_blank">Instructor Guide (PDF) &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="samples/Probabilities_and_Confidence_Hathaway.pptx" class="card-link" target="_blank">Presentation (PPTX) &rarr;</a>
       </div>
     </div>
   </section>
@@ -338,7 +346,7 @@
       <p>I write and think critically about the human dimensions of artificial intelligence — from bias and accountability to how we design systems that are genuinely equitable. Below is a selection of essays, research, and public writing on these questions.</p>
     </div>
 
-    <!-- FEATURED ESSAYS -->
+    <!-- FEATURED -->
     <div style="margin: 2.5rem 5vw 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
       <div class="ethics-featured" style="margin: 0;">
         <div class="ethics-tag">Featured Essay</div>
@@ -347,14 +355,25 @@
         <a href="samples/AI_Ethics_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
       </div>
       <div class="ethics-featured" style="margin: 0;">
-        <div class="ethics-tag">Featured Essay</div>
-        <h3>We Built the Monster We're Afraid Of</h3>
-        <p>Why fears of AI apocalypse say more about human psychology than AI capability — and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
-        <a href="samples/Anthropomorphism_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
+        <div class="ethics-tag">Featured Dataset</div>
+        <h3>AI Ethics Preference Annotation Dataset</h3>
+        <p>A human-annotated RLHF preference dataset examining what well-calibrated AI responses actually look like across six failure mode categories: refusal edge cases, sycophancy, parasocial attachment, anthropomorphism, bias, and dual-use harm. 95 prompts, 190 response pairs, five scoring dimensions, and a labeled failure mode and written justification for every dispreferred response.</p>
+        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="ethics-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="ethics-link" target="_blank">Hugging Face &rarr;</a>
       </div>
     </div>
 
     <div class="journalism-list">
+      <div class="article-row">
+        <div class="article-date">2020</div>
+        <div class="article-body">
+          <h3>We Built the Monster We're Afraid Of</h3>
+          <p>Why fears of AI apocalypse say more about human psychology than AI capability — and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
+          <a href="samples/Anthropomorphism_Essay_Final.pdf" target="_blank" style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.08em; display: inline-block; margin-top: 0.5rem; border-bottom: 1px solid var(--accent);">Read Essay (PDF) &rarr;</a>
+        </div>
+        <div class="article-pub">AI Ethics</div>
+      </div>
       <div class="article-row">
         <div class="article-date">Forthcoming</div>
         <div class="article-body">
