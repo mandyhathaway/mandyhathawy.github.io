@@ -143,6 +143,37 @@
     .contact-right button:hover { background: var(--accent); }
     footer { border-top: 3px double var(--ink); padding: 1.2rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
     footer p { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+    /* SERVICES SECTION */
+    #services { padding: 4rem 5vw; border-bottom: 1px solid var(--rule); background: var(--ink); color: var(--paper); }
+    .services-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; }
+    .services-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--paper); white-space: nowrap; }
+    .services-header .rule-line-inv { flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
+    .services-header .section-num-inv { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .service-card { padding: 2.2rem 2rem; border: 1px solid rgba(255,255,255,0.12); margin: -1px -1px 0 0; }
+    .service-card:hover { background: rgba(255,255,255,0.04); }
+    .service-num { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent2); margin-bottom: 1rem; }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--paper); margin-bottom: 0.75rem; line-height: 1.25; }
+    .service-card p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.75; }
+    .service-card .service-scope { margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent2); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1rem; }
+    @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* TESTIMONIAL CAROUSEL */
+    .testimonial-strip { background: var(--cream); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 3.5rem 5vw; }
+    .testimonial-strip-header { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; text-align: center; }
+    .testimonial-carousel { position: relative; max-width: 760px; margin: 0 auto; }
+    .testimonial-track { overflow: hidden; }
+    .testimonial-slides { display: flex; transition: transform 0.5s ease; }
+    .testimonial-card { min-width: 100%; padding: 2.5rem 2.5rem 2rem; background: var(--paper); border: 1px solid var(--rule); position: relative; box-sizing: border-box; }
+    .testimonial-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; color: var(--accent); position: absolute; top: 0.5rem; left: 1.4rem; }
+    .testimonial-text { font-family: 'Libre Baskerville', serif; font-size: 0.95rem; line-height: 1.85; color: var(--ink); padding-top: 1.5rem; font-style: italic; }
+    .testimonial-attribution { margin-top: 1.4rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+    .testimonial-role { display: block; color: var(--muted); margin-top: 0.2rem; }
+    .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1.5rem; }
+    .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rule); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
+    .carousel-dot.active { background: var(--accent); }
+    .carousel-arrow { background: none; border: 1px solid var(--rule); color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.8rem; width: 32px; height: 32px; cursor: pointer; transition: border-color 0.2s, color 0.2s; display: flex; align-items: center; justify-content: center; }
+    .carousel-arrow:hover { border-color: var(--accent); color: var(--accent); }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .masthead-name { animation: fadeUp 0.8s ease forwards; }
     .hero { animation: fadeUp 0.8s 0.2s ease both; }
@@ -169,7 +200,7 @@
     <div class="dateline">
       <span>Work &amp; Writing</span>
       <span>Mandy Hathaway</span>
-      <span>Available for Hire</span>
+      <span>Open to Consulting &amp; Remote Roles</span>
     </div>
     <div class="masthead-name">
       <h1>Mandy <em>Hathaway</em></h1>
@@ -179,6 +210,7 @@
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#writing">Technical Writing</a></li>
       <li><a href="#ai-ethics">AI Ethics</a></li>
       <li><a href="#journalism">Journalism</a></li>
@@ -204,15 +236,16 @@
   <section id="about" class="hero">
     <div class="hero-left">
       <blockquote class="hero-quote">
-        A lifetime of building with technology. A career spent making it understandable. Now working at the frontier of AI ~ writing it, teaching it, tweaking it, and asking whether we're doing it right.
+        Thirty years of building with technology. A career spent making it understandable. Now asking the questions that get skipped when everyone's moving fast.
       </blockquote>
       <img src="images/headshot.jpg" alt="Mandy Hathaway" style="width:100%; max-width:320px; display:block; margin:0 auto; border: 1px solid var(--rule);">
     </div>
     <div class="hero-rule"></div>
     <div class="hero-bio">
-      <p>I'm Mandy Hathaway, an AI ethics consultant and technology specialist with 30 years of hands-on technology experience and an MA in Ethical Technology &amp; Artificial Intelligence from Metropolitan State University. I work at the intersection of machine learning and communication: advising on responsible AI practices, writing documentation that reflects how these systems actually work, and asking the ethical questions that get skipped when moving fast.</p>
-      <p>I bring the technical background and communication range the field requires, from AI development and system design to editorial leadership and the classroom. I spent three years as Technology Editor at <em>The Metropolitan</em>, taught hundreds of students and led a team of up to 35 instructors at Coding With Kids, and have published on algorithmic bias and responsible AI development.</p>
-      <p>I consult and write remotely ~ AI ethics advisory, technical writing for AI/ML products, prompt engineering, and responsible AI documentation.</p>
+      <p>I'm Mandy Hathaway, an AI ethics consultant and technical writer. Organizations hire me when they need someone who understands how these systems actually work and can communicate that clearly: to leadership, to regulators, to the public, or to their own teams. I hold an MA in Ethical Technology &amp; Artificial Intelligence from Metropolitan State University and 30 years of hands-on technology experience.</p>
+      <p>My work sits at the edge where machine learning meets communication and accountability. I advise on responsible AI practices, write documentation that reflects how these systems actually work, and identify the ethical questions that get skipped when moving fast.</p>
+      <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor for three years. I've published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do.</p>
+      <p>Available remotely for consulting engagements, senior technical writing roles, and AI ethics advisory work.</p>
       <p class="skills-label">Languages &amp; Tools</p>
       <div class="skills-strip">
         <span class="skill-badge highlight">Python</span>
@@ -244,6 +277,7 @@
         <span class="skill-badge">Azure</span>
         <span class="skill-badge">Power BI</span>
         <span class="skill-badge">Data Visualization</span>
+        <span class="skill-badge">Scratch</span>
         <span class="skill-badge">Markdown</span>
         <span class="skill-badge">AsciiDoc</span>
         <span class="skill-badge">Postman</span>
@@ -260,6 +294,36 @@
       <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.8rem;">
         <a href="#contact" class="hire-btn">Get in Touch</a>
         <a href="samples/Mandy_Hathaway_Resume_2pg.pdf" target="_blank" class="hire-btn" style="background: var(--accent);">Download Résumé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header">
+      <span class="section-num-inv">What I Do</span>
+      <div class="rule-line-inv"></div>
+      <h2>Services</h2>
+      <div class="rule-line-inv"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>AI Product Consulting</h3>
+        <p>I work with organizations that are adopting or building AI and need to think carefully about what they're building, buying, or deploying. That includes bias and fairness audits, responsible AI policy review, AI governance frameworks, conversational agent design, and ethics training for non-technical teams. I write clearly about hard problems and I don't soften findings to make them easier to ignore.</p>
+        <div class="service-scope">Policy review &nbsp;·&nbsp; Bias audits &nbsp;·&nbsp; Agent design &nbsp;·&nbsp; Ethics training &nbsp;·&nbsp; AI governance</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Technical Writing &amp; Documentation</h3>
+        <p>I write documentation for AI and ML products that reflects how the systems actually work: API references, user guides, developer tutorials, prompt engineering libraries, and internal knowledge bases. I know how to read a codebase, talk to engineers, and produce documentation that people actually use. No jargon for its own sake. No oversimplification that misleads.</p>
+        <div class="service-scope">API docs &nbsp;·&nbsp; User guides &nbsp;·&nbsp; Developer tutorials &nbsp;·&nbsp; Style guides</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>AI Literacy &amp; Curriculum</h3>
+        <p>I design and deliver AI education for audiences who need the real picture: what these systems can and can't do, where they fail, and why the failure modes matter. My courses have reached students from elementary school through professional development contexts. I can also write plain-language explainers and briefing documents for leadership and board-level audiences.</p>
+        <div class="service-scope">Curriculum design &nbsp;·&nbsp; Executive briefings &nbsp;·&nbsp; Staff training &nbsp;·&nbsp; Public explainers</div>
       </div>
     </div>
   </section>
@@ -466,11 +530,50 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <div class="testimonial-strip">
+    <div class="testimonial-strip-header">What People Say</div>
+    <div class="testimonial-carousel" id="testimonial-carousel">
+      <div class="testimonial-track">
+        <div class="testimonial-slides" id="testimonial-slides">
+          <div class="testimonial-card">
+            <p class="testimonial-text">Mandy's work occupies a rare intersection of philosophical precision and technical depth. In my research on AI therapy tools, her analysis was precise enough to stand alongside peer-reviewed academic literature, which is exactly how I cited it. She writes about AI the way it should be written about: carefully, honestly, and without the hype.</p>
+            <div class="testimonial-attribution">
+              Veronica Fuentes
+              <span class="testimonial-role">Researcher &nbsp;·&nbsp; University of North Texas</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">I have known Mandy for over 20 years and I have never met anyone with more dedication and drive. What sets her apart is how easily she can learn something new and explain the concepts of any subject as if she had been doing it all her life. From photography to Artificial Intelligence, her ability to master a subject is truly astonishing. She can take a technical subject and create a learning environment that not only teaches, but inspires others to excel.</p>
+            <div class="testimonial-attribution">
+              Mark Bolla
+              <span class="testimonial-role">Senior Electrical Engineer</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">Mandy worked incredibly hard for Pillsbury United Communities serving on their IT committee, developing curricula, and technical user manuals for their technology literacy programming. Mandy had a special knack for making people feel comfortable and express real challenges to get to the root of situations.</p>
+            <div class="testimonial-attribution">
+              Joel Krogstad
+              <span class="testimonial-role">Neuroscience Program Manager &nbsp;·&nbsp; Pillsbury United Communities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-arrow" id="t-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
+        <button class="carousel-arrow" id="t-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact-left">
       <h2>Let's Work <em>Together</em></h2>
-      <p>Open to remote contracts and senior roles in AI/ML technical writing, AI ethics consulting, prompt engineering, and instructional design. Always happy to talk about interesting problems.</p>
+      <p>I take on consulting engagements and senior remote roles in AI ethics, technical writing, and AI/ML documentation. If you're building something that touches AI and need someone who can think critically about it and communicate it clearly, I'd like to hear about it.</p>
       <div class="contact-links">
         <a href="mailto:hathaway.mandyl@gmail.com">hathaway.mandyl@gmail.com</a>
         <a href="https://www.linkedin.com/in/mandyhathaway/" target="_blank" rel="noopener">LinkedIn  /  mandyhathaway</a>
@@ -531,6 +634,39 @@
     lbClose.addEventListener('click', closeLightbox);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+  <script>
+    // TESTIMONIAL CAROUSEL
+    (function() {
+      const slides = document.getElementById('testimonial-slides');
+      const dots = document.querySelectorAll('.carousel-dot');
+      let current = 0;
+      let timer;
+
+      function goTo(idx) {
+        current = (idx + 3) % 3;
+        slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      function next() { goTo(current + 1); }
+      function prev() { goTo(current - 1); }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, 6000);
+      }
+
+      document.getElementById('t-next').addEventListener('click', () => { next(); resetTimer(); });
+      document.getElementById('t-prev').addEventListener('click', () => { prev(); resetTimer(); });
+      dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.idx); resetTimer(); }));
+
+      const carousel = document.getElementById('testimonial-carousel');
+      carousel.addEventListener('mouseenter', () => clearInterval(timer));
+      carousel.addEventListener('mouseleave', resetTimer);
+
+      resetTimer();
+    })();
   </script>
 </body>
 </html>
