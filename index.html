@@ -211,8 +211,8 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#writing">Technical Writing</a></li>
       <li><a href="#ai-ethics">AI Ethics</a></li>
+      <li><a href="#writing">Technical Writing</a></li>
       <li><a href="#journalism">Journalism</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -328,23 +328,114 @@
     </div>
   </section>
 
-  <!-- TECHNICAL WRITING -->
-  <section id="writing">
+  <!-- TESTIMONIALS -->
+  <div class="testimonial-strip">
+    <div class="testimonial-strip-header">What People Say</div>
+    <div class="testimonial-carousel" id="testimonial-carousel">
+      <div class="testimonial-track">
+        <div class="testimonial-slides" id="testimonial-slides">
+          <div class="testimonial-card">
+            <p class="testimonial-text">Mandy's work occupies a rare intersection of philosophical precision and technical depth. In my research on AI therapy tools, her analysis was precise enough to stand alongside peer-reviewed academic literature, which is exactly how I cited it. She writes about AI the way it should be written about: carefully, honestly, and without the hype.</p>
+            <div class="testimonial-attribution">
+              Veronica Fuentes
+              <span class="testimonial-role">Researcher &nbsp;·&nbsp; University of North Texas</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">I have known Mandy for over 20 years and I have never met anyone with more dedication and drive. What sets her apart is how easily she can learn something new and explain the concepts of any subject as if she had been doing it all her life. From photography to Artificial Intelligence, her ability to master a subject is truly astonishing. She can take a technical subject and create a learning environment that not only teaches, but inspires others to excel.</p>
+            <div class="testimonial-attribution">
+              Mark Bolla
+              <span class="testimonial-role">Senior Electrical Engineer</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">Mandy worked incredibly hard for Pillsbury United Communities serving on their IT committee, developing curricula, and technical user manuals for their technology literacy programming. Mandy had a special knack for making people feel comfortable and express real challenges to get to the root of situations.</p>
+            <div class="testimonial-attribution">
+              Joel Krogstad
+              <span class="testimonial-role">Neuroscience Program Manager &nbsp;·&nbsp; Pillsbury United Communities</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">She has managed to turn a program geared for children into a program that suits my sister, both as an adult and as someone who loves a little whimsy. Mandy uses individualized curriculum to best suit her students for success. What more can you ask for from an educator?</p>
+            <div class="testimonial-attribution">
+              Corrine Matlak
+              <span class="testimonial-role">Producer, Location Scout &amp; Manager &nbsp;·&nbsp; Coding With Kids client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-arrow" id="t-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
+        <button class="carousel-dot" data-idx="3" aria-label="Slide 4"></button>
+        <button class="carousel-arrow" id="t-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI ETHICS -->
+  <section id="ai-ethics">
     <div class="section-header">
       <span class="section-num">01</span>
       <div class="rule-line"></div>
-      <h2>Technical Writing &amp; Curriculum</h2>
+      <h2>AI Ethics</h2>
+      <div class="rule-line"></div>
+    </div>
+    <div class="ethics-intro">
+      <p>I write and think critically about the human dimensions of artificial intelligence — from bias and accountability to how we design systems that are genuinely equitable. Below is a selection of essays, research, and public writing on these questions.</p>
+    </div>
+
+    <!-- FEATURED -->
+    <div style="margin: 2.5rem 5vw 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <div class="ethics-featured" style="margin: 0;">
+        <div class="ethics-tag">Featured Essay</div>
+        <h3>The Bias We're Building In</h3>
+        <p>AI systems don't generate bias from nowhere — they learn it from us. This essay traces how racial and gender inequity becomes encoded in machine learning systems, why removing sensitive variables isn't enough, and what it actually takes to build systems that don't perpetuate the injustices they inherit.</p>
+        <a href="samples/AI_Ethics_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
+      </div>
+      <div class="ethics-featured" style="margin: 0;">
+        <div class="ethics-tag">Featured Dataset</div>
+        <h3>AI Ethics Preference Annotation Dataset</h3>
+        <p>A human-annotated RLHF preference dataset examining what well-calibrated AI responses actually look like across six failure mode categories: refusal edge cases, sycophancy, parasocial attachment, anthropomorphism, bias, and dual-use harm. 95 prompts, 190 response pairs, five scoring dimensions, and a labeled failure mode and written justification for every dispreferred response.</p>
+        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="ethics-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="ethics-link" target="_blank">Hugging Face &rarr;</a>
+      </div>
+    </div>
+
+    <div class="journalism-list">
+      <div class="article-row">
+        <div class="article-date">2020</div>
+        <div class="article-body">
+          <h3>We Built the Monster We're Afraid Of</h3>
+          <p>Why fears of AI apocalypse say more about human psychology than AI capability — and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
+          <a href="samples/Anthropomorphism_Essay_Final.pdf" class="ethics-link" target="_blank">Read Essay (PDF) &rarr;</a>
+        </div>
+        <div class="article-pub">AI Ethics</div>
+      </div>
+      <div class="article-row">
+        <div class="article-date">Forthcoming</div>
+        <div class="article-body">
+          <h3>Why Your Computer Can't Be Conscious (And Why the Industry Needs You to Think They Can)</h3>
+          <p>A philosophical and scientific case against AI consciousness claims, tracing why classical digital computation cannot meet the substrate conditions consciousness requires, and how industry incentives drive the hype.</p>
+        </div>
+        <div class="article-pub">AI Ethics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL WRITING -->
+  <section id="writing">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <div class="rule-line"></div>
+      <h2>Technical Writing</h2>
       <div class="rule-line"></div>
     </div>
     <div class="writing-grid">
-      <div class="writing-card">
-        <div class="card-type">Annotation Dataset</div>
-        <h3>AI Ethics Preference Annotation Dataset</h3>
-        <p>A fully annotated RLHF preference dataset documenting 95 prompt/response pairs across six AI ethics categories. Each pair includes scores across five dimensions, a named failure mode for the dispreferred response, and a 2&ndash;4 sentence justification citing specific text. Published on Hugging Face.</p>
-        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="card-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
-        &nbsp;&nbsp;
-        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="card-link" target="_blank">Hugging Face &rarr;</a>
-      </div>
+
       <div class="writing-card">
         <div class="card-type">Style Guide</div>
         <h3>How We Write About AI</h3>
@@ -402,57 +493,6 @@
         <a href="samples/Probabilities_and_Confidence_Hathaway.pdf" class="card-link" target="_blank">Instructor Guide (PDF) &rarr;</a>
         &nbsp;&nbsp;
         <a href="samples/Probabilities_and_Confidence_Hathaway.pptx" class="card-link" target="_blank">Presentation (PPTX) &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AI ETHICS -->
-  <section id="ai-ethics">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <div class="rule-line"></div>
-      <h2>AI Ethics</h2>
-      <div class="rule-line"></div>
-    </div>
-    <div class="ethics-intro">
-      <p>I write and think critically about the human dimensions of artificial intelligence — from bias and accountability to how we design systems that are genuinely equitable. Below is a selection of essays, research, and public writing on these questions.</p>
-    </div>
-
-    <!-- FEATURED -->
-    <div style="margin: 2.5rem 5vw 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-      <div class="ethics-featured" style="margin: 0;">
-        <div class="ethics-tag">Featured Essay</div>
-        <h3>The Bias We're Building In</h3>
-        <p>AI systems don't generate bias from nowhere — they learn it from us. This essay traces how racial and gender inequity becomes encoded in machine learning systems, why removing sensitive variables isn't enough, and what it actually takes to build systems that don't perpetuate the injustices they inherit.</p>
-        <a href="samples/AI_Ethics_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
-      </div>
-      <div class="ethics-featured" style="margin: 0;">
-        <div class="ethics-tag">Featured Dataset</div>
-        <h3>AI Ethics Preference Annotation Dataset</h3>
-        <p>A human-annotated RLHF preference dataset examining what well-calibrated AI responses actually look like across six failure mode categories: refusal edge cases, sycophancy, parasocial attachment, anthropomorphism, bias, and dual-use harm. 95 prompts, 190 response pairs, five scoring dimensions, and a labeled failure mode and written justification for every dispreferred response.</p>
-        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="ethics-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
-        &nbsp;&nbsp;
-        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="ethics-link" target="_blank">Hugging Face &rarr;</a>
-      </div>
-    </div>
-
-    <div class="journalism-list">
-      <div class="article-row">
-        <div class="article-date">2020</div>
-        <div class="article-body">
-          <h3>We Built the Monster We're Afraid Of</h3>
-          <p>Why fears of AI apocalypse say more about human psychology than AI capability — and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
-          <a href="samples/Anthropomorphism_Essay_Final.pdf" class="ethics-link" target="_blank">Read Essay (PDF) &rarr;</a>
-        </div>
-        <div class="article-pub">AI Ethics</div>
-      </div>
-      <div class="article-row">
-        <div class="article-date">Forthcoming</div>
-        <div class="article-body">
-          <h3>Why Your Computer Can't Be Conscious (And Why the Industry Needs You to Think They Can)</h3>
-          <p>A philosophical and scientific case against AI consciousness claims, tracing why classical digital computation cannot meet the substrate conditions consciousness requires, and how industry incentives drive the hype.</p>
-        </div>
-        <div class="article-pub">AI Ethics</div>
       </div>
     </div>
   </section>
@@ -530,45 +570,6 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <div class="testimonial-strip">
-    <div class="testimonial-strip-header">What People Say</div>
-    <div class="testimonial-carousel" id="testimonial-carousel">
-      <div class="testimonial-track">
-        <div class="testimonial-slides" id="testimonial-slides">
-          <div class="testimonial-card">
-            <p class="testimonial-text">Mandy's work occupies a rare intersection of philosophical precision and technical depth. In my research on AI therapy tools, her analysis was precise enough to stand alongside peer-reviewed academic literature, which is exactly how I cited it. She writes about AI the way it should be written about: carefully, honestly, and without the hype.</p>
-            <div class="testimonial-attribution">
-              Veronica Fuentes
-              <span class="testimonial-role">Researcher &nbsp;·&nbsp; University of North Texas</span>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-text">I have known Mandy for over 20 years and I have never met anyone with more dedication and drive. What sets her apart is how easily she can learn something new and explain the concepts of any subject as if she had been doing it all her life. From photography to Artificial Intelligence, her ability to master a subject is truly astonishing. She can take a technical subject and create a learning environment that not only teaches, but inspires others to excel.</p>
-            <div class="testimonial-attribution">
-              Mark Bolla
-              <span class="testimonial-role">Senior Electrical Engineer</span>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-text">Mandy worked incredibly hard for Pillsbury United Communities serving on their IT committee, developing curricula, and technical user manuals for their technology literacy programming. Mandy had a special knack for making people feel comfortable and express real challenges to get to the root of situations.</p>
-            <div class="testimonial-attribution">
-              Joel Krogstad
-              <span class="testimonial-role">Neuroscience Program Manager &nbsp;·&nbsp; Pillsbury United Communities</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-arrow" id="t-prev" aria-label="Previous">&#8592;</button>
-        <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
-        <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
-        <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
-        <button class="carousel-arrow" id="t-next" aria-label="Next">&#8594;</button>
-      </div>
-    </div>
-  </div>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact-left">
@@ -644,7 +645,7 @@
       let timer;
 
       function goTo(idx) {
-        current = (idx + 3) % 3;
+        current = (idx + 4) % 4;
         slides.style.transform = 'translateX(-' + (current * 100) + '%)';
         dots.forEach((d, i) => d.classList.toggle('active', i === current));
       }
