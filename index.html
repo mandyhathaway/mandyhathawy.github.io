@@ -211,8 +211,8 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#ai-ethics">AI Ethics</a></li>
       <li><a href="#writing">Technical Writing</a></li>
+      <li><a href="#ai-ethics">AI Ethics</a></li>
       <li><a href="#journalism">Journalism</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -243,8 +243,9 @@
     <div class="hero-rule"></div>
     <div class="hero-bio">
       <p>I'm Mandy Hathaway, an AI ethics consultant and technical writer. Organizations hire me when they need someone who understands how these systems actually work and can communicate that clearly: to leadership, to regulators, to the public, or to their own teams. I hold an MA in Ethical Technology &amp; Artificial Intelligence from Metropolitan State University and 30 years of hands-on technology experience.</p>
-      <p>I've advised on responsible AI practices, published on algorithmic bias and the gap between how AI systems are marketed and what they actually do, and worked with clients who need someone who won't soften findings to make them easier to ignore. I work with nonprofits and the kinds of organizations that take seriously what they owe to the people their technology touches.</p>
-      <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor. I take on consulting engagements and contract roles remotely.</p>
+      <p>My work sits at the edge where machine learning meets communication and accountability. I advise on responsible AI practices, write documentation that reflects how these systems actually work, and identify the ethical questions that get skipped when moving fast.</p>
+      <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor for three years. I've published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do.</p>
+      <p>I consult and write remotely ~ AI ethics advisory, AI product consulting, technical writing for AI/ML products, prompt engineering, conversational design, and responsible AI documentation.</p>
       <p class="skills-label">Languages &amp; Tools</p>
       <div class="skills-strip">
         <span class="skill-badge highlight">Python</span>
@@ -367,6 +368,13 @@
               <span class="testimonial-role">Producer, Location Scout &amp; Manager &nbsp;·&nbsp; CWK Teaching Client</span>
             </div>
           </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">Mandy is one of those rare professionals who brings both deep expertise and genuine care into everything she does. She is an exceptional problem solver, quick, thoughtful, and always able to break down complex challenges into clear, manageable steps. What stood out most was her ability to translate those solutions into bite-sized, accessible learning moments for students, meeting them exactly where they were while still pushing them to grow. This skill translates to working with adults and getting to the root of any challenge that comes her way with grace and speed.</p>
+            <div class="testimonial-attribution">
+              Lauren Casserly
+              <span class="testimonial-role">Coding with Kids</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="carousel-controls">
@@ -375,6 +383,7 @@
         <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
         <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
         <button class="carousel-dot" data-idx="3" aria-label="Slide 4"></button>
+        <button class="carousel-dot" data-idx="4" aria-label="Slide 5"></button>
         <button class="carousel-arrow" id="t-next" aria-label="Next">&#8594;</button>
       </div>
     </div>
@@ -440,6 +449,14 @@
       <div class="rule-line"></div>
     </div>
     <div class="writing-grid">
+      <div class="writing-card">
+        <div class="card-type">Annotation Dataset</div>
+        <h3>AI Ethics Preference Annotation Dataset</h3>
+        <p>A fully annotated RLHF preference dataset documenting 95 prompt/response pairs across six AI ethics categories. Each pair includes scores across five dimensions, a named failure mode for the dispreferred response, and a 2&ndash;4 sentence justification citing specific text. Published on Hugging Face.</p>
+        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="card-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="card-link" target="_blank">Hugging Face &rarr;</a>
+      </div>
       <div class="writing-card">
         <div class="card-type">Style Guide</div>
         <h3>How We Write About AI</h3>
@@ -648,8 +665,9 @@
       let current = 0;
       let timer;
 
+      const total = dots.length;
       function goTo(idx) {
-        current = (idx + 3) % 3;
+        current = (idx + total) % total;
         slides.style.transform = 'translateX(-' + (current * 100) + '%)';
         dots.forEach((d, i) => d.classList.toggle('active', i === current));
       }
