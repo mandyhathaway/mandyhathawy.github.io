@@ -66,8 +66,8 @@
     header { border-bottom: 3px double var(--ink); padding: 0 5vw; }
     .dateline { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
     .masthead-name { text-align: center; padding: 2.5rem 0 1.8rem; }
-    .masthead-logo { display: block; margin: 1rem auto 0; }
-    .masthead-name h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 900; letter-spacing: -0.02em; line-height: 0.95; text-transform: uppercase; }
+    .masthead-logo { display: inline-block; vertical-align: middle; width: clamp(3rem, 7vw, 6rem); height: auto; flex-shrink: 0; }
+    .masthead-name h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 900; letter-spacing: -0.02em; line-height: 0.95; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: clamp(0.5rem, 2vw, 1.5rem); flex-wrap: wrap; }
     .masthead-name h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
     .tagline { margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
     nav { border-top: 1px solid var(--rule); border-bottom: 3px double var(--ink); padding: 0 5vw; }
@@ -204,8 +204,7 @@
       <span>Open to Consulting &amp; Remote Roles</span>
     </div>
     <div class="masthead-name">
-      <h1>Mandy <em>Hathaway</em></h1>
-      <svg class="masthead-logo" width="90" height="90" viewBox="10 8 60 56" fill="none">
+      <h1><span>Mandy</span><svg class="masthead-logo" width="90" height="90" viewBox="10 8 60 56" fill="none" aria-hidden="true">
         <polygon points="40,12 58,24 58,48 40,60 22,48 22,24" stroke="#3a3f3a" stroke-width="1.8" fill="none"/>
         <circle cx="40" cy="12" r="2.2" fill="#5a7a3a"/>
         <circle cx="58" cy="24" r="2.2" fill="#5a7a3a"/>
@@ -227,7 +226,7 @@
         <circle cx="22" cy="24" r="5" fill="#5a7a3a" opacity="0.08"/>
         <circle cx="40" cy="36" r="11" stroke="#3a3f3a" stroke-width="2.2" fill="none"/>
         <line x1="40" y1="23" x2="40" y2="49" stroke="#3a3f3a" stroke-width="2.2"/>
-      </svg>
+      </svg><em>Hathaway</em></h1>
       <p class="tagline">AI Ethics Consultant &amp; Technology Specialist &nbsp;·&nbsp; Technical Writer &nbsp;·&nbsp; Journalist</p>
     </div>
   </header>
