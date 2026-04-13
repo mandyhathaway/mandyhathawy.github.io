@@ -66,6 +66,7 @@
     header { border-bottom: 3px double var(--ink); padding: 0 5vw; }
     .dateline { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
     .masthead-name { text-align: center; padding: 2.5rem 0 1.8rem; }
+    .masthead-logo { display: block; margin: 1rem auto 0; }
     .masthead-name h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 900; letter-spacing: -0.02em; line-height: 0.95; text-transform: uppercase; }
     .masthead-name h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
     .tagline { margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
@@ -204,6 +205,29 @@
     </div>
     <div class="masthead-name">
       <h1>Mandy <em>Hathaway</em></h1>
+      <svg class="masthead-logo" width="90" height="90" viewBox="10 8 60 56" fill="none">
+        <polygon points="40,12 58,24 58,48 40,60 22,48 22,24" stroke="#3a3f3a" stroke-width="1.8" fill="none"/>
+        <circle cx="40" cy="12" r="2.2" fill="#5a7a3a"/>
+        <circle cx="58" cy="24" r="2.2" fill="#5a7a3a"/>
+        <circle cx="58" cy="48" r="2.2" fill="#5a7a3a"/>
+        <circle cx="40" cy="60" r="2.2" fill="#5a7a3a"/>
+        <circle cx="22" cy="48" r="2.2" fill="#5a7a3a"/>
+        <circle cx="22" cy="24" r="2.2" fill="#5a7a3a"/>
+        <line x1="40" y1="12" x2="58" y2="48" stroke="#5a7a3a" stroke-width="0.5" opacity="0.3"/>
+        <line x1="40" y1="12" x2="22" y2="48" stroke="#5a7a3a" stroke-width="0.5" opacity="0.3"/>
+        <line x1="58" y1="24" x2="22" y2="48" stroke="#5a7a3a" stroke-width="0.5" opacity="0.3"/>
+        <line x1="22" y1="24" x2="58" y2="48" stroke="#5a7a3a" stroke-width="0.5" opacity="0.3"/>
+        <line x1="58" y1="24" x2="40" y2="60" stroke="#5a7a3a" stroke-width="0.5" opacity="0.3"/>
+        <line x1="22" y1="24" x2="40" y2="60" stroke="#5a7a3a" stroke-width="0.5" opacity="0.3"/>
+        <circle cx="40" cy="12" r="5" fill="#5a7a3a" opacity="0.08"/>
+        <circle cx="58" cy="24" r="5" fill="#5a7a3a" opacity="0.08"/>
+        <circle cx="58" cy="48" r="5" fill="#5a7a3a" opacity="0.08"/>
+        <circle cx="40" cy="60" r="5" fill="#5a7a3a" opacity="0.08"/>
+        <circle cx="22" cy="48" r="5" fill="#5a7a3a" opacity="0.08"/>
+        <circle cx="22" cy="24" r="5" fill="#5a7a3a" opacity="0.08"/>
+        <circle cx="40" cy="36" r="11" stroke="#3a3f3a" stroke-width="2.2" fill="none"/>
+        <line x1="40" y1="23" x2="40" y2="49" stroke="#3a3f3a" stroke-width="2.2"/>
+      </svg>
       <p class="tagline">AI Ethics Consultant &amp; Technology Specialist &nbsp;·&nbsp; Technical Writer &nbsp;·&nbsp; Journalist</p>
     </div>
   </header>
@@ -246,41 +270,27 @@
       <p>My work sits at the edge where machine learning meets communication and accountability. I advise on responsible AI practices, write documentation that reflects how these systems actually work, and identify the ethical questions that get skipped when moving fast.</p>
       <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor for three years. I've published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do.</p>
       <p>I consult and write remotely ~ AI ethics advisory, AI product consulting, technical writing for AI/ML products, prompt engineering, conversational design, and responsible AI documentation.</p>
+      <p class="skills-label">Core Expertise</p>
+      <div class="skills-strip">
+        <span class="skill-badge highlight">AI Ethics</span>
+        <span class="skill-badge highlight">AI Governance</span>
+        <span class="skill-badge highlight">Responsible AI Implementation</span>
+        <span class="skill-badge highlight">Conversational AI Design</span>
+        <span class="skill-badge highlight">Agentic AI</span>
+        <span class="skill-badge highlight">Technical Writing</span>
+        <span class="skill-badge highlight">Prompt Engineering</span>
+        <span class="skill-badge highlight">Data Annotation</span>
+        <span class="skill-badge highlight">RLHF</span>
+        <span class="skill-badge highlight">LLM Fine-tuning</span>
+      </div>
       <p class="skills-label">Languages &amp; Tools</p>
       <div class="skills-strip">
-        <span class="skill-badge highlight">Python</span>
-        <span class="skill-badge highlight">PyTorch</span>
-        <span class="skill-badge highlight">Machine Learning</span>
-        <span class="skill-badge highlight">NLP</span>
-        <span class="skill-badge highlight">Prompt Engineering</span>
-        <span class="skill-badge highlight">RLHF</span>
-        <span class="skill-badge highlight">Large Language Models</span>
-        <span class="skill-badge highlight">LLM Fine-tuning</span>
-        <span class="skill-badge highlight">Generative AI</span>
-        <span class="skill-badge highlight">Deep Learning</span>
-        <span class="skill-badge highlight">Neural Networks</span>
-        <span class="skill-badge highlight">AI Ethics</span>
-        <span class="skill-badge highlight">AI Safety</span>
-        <span class="skill-badge highlight">Responsible AI</span>
-        <span class="skill-badge highlight">AI Governance</span>
-        <span class="skill-badge highlight">AI Policy</span>
-        <span class="skill-badge highlight">Technical Writing</span>
-        <span class="skill-badge">Computer Vision</span>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">PyTorch</span>
         <span class="skill-badge">Hugging Face</span>
-        <span class="skill-badge">NumPy</span>
-        <span class="skill-badge">Pandas</span>
-        <span class="skill-badge">Matplotlib</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">HTML5</span>
-        <span class="skill-badge">Linux</span>
+        <span class="skill-badge">Machine Learning</span>
+        <span class="skill-badge">NLP</span>
         <span class="skill-badge">Git</span>
-        <span class="skill-badge">Azure</span>
-        <span class="skill-badge">Power BI</span>
-        <span class="skill-badge">Data Visualization</span>
-        <span class="skill-badge">Scratch</span>
-        <span class="skill-badge">Markdown</span>
-        <span class="skill-badge">AsciiDoc</span>
-        <span class="skill-badge">Postman</span>
       </div>
       <p class="skills-label" style="margin-top:1.2rem;">Certifications &amp; Coursework</p>
       <div class="skills-strip">
@@ -289,8 +299,7 @@
         <a href="https://www.linkedin.com/learning/certificates/d0e1994d5389a7755b49f4518d2a91eceb94f0b71ea737b0e6e14c5ddc12b0a2?trk=share_certificate" target="_blank" rel="noopener" class="skill-badge highlight" style="text-decoration:none;">Operationalizing AI Governance: Strategy and Foundations  (All Tech Is Human, 2026)</a>
         <a href="https://www.linkedin.com/learning/certificates/f31c1e3e2a2e23847efa6f54d5c3fdb2a439ad1acb03cbec95b2d18e91db6b1d?trk=share_certificate" target="_blank" rel="noopener" class="skill-badge highlight" style="text-decoration:none;">Hands-On Data Annotation: Applied Machine Learning  (LinkedIn, 2026)</a>
         <a href="https://www.linkedin.com/learning/certificates/08f044a2494497b0c7804d7bc963bdf1514bd80f0c173d41a73787dd46956ac3?trk=share_certificate" target="_blank" rel="noopener" class="skill-badge highlight" style="text-decoration:none;">Data Preparation, Feature Engineering, and Augmentation for AI Models  (LinkedIn, 2026)</a>
-        <a href="https://skillshop.exceedlms.com/student/award/EZsZnd8uKVkwQ4kaf6nA3SUV" target="_blank" rel="noopener" class="skill-badge highlight" style="text-decoration:none;">Generative AI for Educators  (Google, 2024)</a>
-        <a href="https://www.linkedin.com/learning/certificates/0caabba8ab15a6b58e98aafea9673bc05f58b95372ccf7a2c24cb931be5c25d4" target="_blank" rel="noopener" class="skill-badge highlight" style="text-decoration:none;">Lightweight AI with Small Language Models  (LinkedIn, 2024)</a>
+
       </div>
       <p class="skills-label" style="margin-top:1.2rem;">Memberships &amp; Affiliations</p>
       <div class="skills-strip">
@@ -449,14 +458,6 @@
       <div class="rule-line"></div>
     </div>
     <div class="writing-grid">
-      <div class="writing-card">
-        <div class="card-type">Annotation Dataset</div>
-        <h3>AI Ethics Preference Annotation Dataset</h3>
-        <p>A fully annotated RLHF preference dataset documenting 95 prompt/response pairs across six AI ethics categories. Each pair includes scores across five dimensions, a named failure mode for the dispreferred response, and a 2&ndash;4 sentence justification citing specific text. Published on Hugging Face.</p>
-        <a href="samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf" class="card-link" target="_blank">Annotation Doc (PDF) &rarr;</a>
-        &nbsp;&nbsp;
-        <a href="https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset" class="card-link" target="_blank">Hugging Face &rarr;</a>
-      </div>
       <div class="writing-card">
         <div class="card-type">Style Guide</div>
         <h3>How We Write About AI</h3>
