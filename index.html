@@ -106,6 +106,10 @@
     body.readable-font .masthead-name h1 em { font-weight: 600 !important; font-style: normal; }
     body.readable-font .contact-left h2 em { font-style: normal; }
 
+    /* BIONIC READING: only active when Reading Mode is on. First ~40% of each word is heavy-weight. */
+    body.readable-font b.bionic { font-weight: 800; }
+    body:not(.readable-font) b.bionic { font-weight: inherit; }
+
     /* SKIP LINK for keyboard users */
     .skip-link { position: absolute; left: -10000px; top: 0; background: var(--ink); color: var(--paper); padding: 0.8rem 1.2rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; z-index: 10000; }
     .skip-link:focus { left: 0.5rem; top: 0.5rem; outline: 3px solid var(--accent2); }
@@ -797,20 +801,81 @@
     })();
   </script>
   <script>
-    // READABLE FONT TOGGLE (Lexend, persisted via localStorage)
+    // READABLE FONT TOGGLE (Lexend + Bionic Reading, persisted via localStorage)
     (function() {
       const btn = document.getElementById('readable-font-toggle');
       if (!btn) return;
+
+      // Bionic Reading: wrap the first ~40% of each word in <b>
+      // Only target body-prose elements. Skip nav, buttons, headings, labels, code, mono type.
+      const BIONIC_SELECTORS = 'p, li, blockquote, .testimonial-text, .hero-quote, .hero-bio, .service-body, .article-body p, .project-body, .about-body p, .skill-badge';
+      const SKIP_TAGS = new Set(['SCRIPT','STYLE','CODE','PRE','A','BUTTON','INPUT','TEXTAREA','LABEL','NAV']);
+
+      function bionicWord(word) {
+        // Keep punctuation at edges untouched; bold the first ceil(len*0.4) letters of the alpha core
+        const m = word.match(/^([^A-Za-z0-9]*)([A-Za-z0-9\u2019\u2018\u2014\u2013-]+)([^A-Za-z0-9]*)$/);
+        if (!m) return word;
+        const [, lead, core, tail] = m;
+        if (core.length < 2) return word;
+        const cut = Math.max(1, Math.ceil(core.length * 0.4));
+        return lead + '<b class="bionic">' + core.slice(0, cut) + '</b>' + core.slice(cut) + tail;
+      }
+
+      function bionicifyText(node) {
+        const parts = node.nodeValue.split(/(\s+)/);
+        const html = parts.map(p => /\s+/.test(p) ? p : bionicWord(p)).join('');
+        if (html === node.nodeValue) return;
+        const span = document.createElement('span');
+        span.className = 'bionic-wrap';
+        span.innerHTML = html;
+        node.parentNode.replaceChild(span, node);
+      }
+
+      function walkAndWrap(el) {
+        if (el.dataset && el.dataset.bionicDone) return;
+        const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+          acceptNode: n => {
+            let p = n.parentNode;
+            while (p && p !== el) {
+              if (SKIP_TAGS.has(p.tagName)) return NodeFilter.FILTER_REJECT;
+              if (p.classList && p.classList.contains('bionic-wrap')) return NodeFilter.FILTER_REJECT;
+              p = p.parentNode;
+            }
+            return n.nodeValue && n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+          }
+        });
+        const targets = [];
+        let n; while ((n = walker.nextNode())) targets.push(n);
+        targets.forEach(bionicifyText);
+        if (el.dataset) el.dataset.bionicDone = '1';
+      }
+
+      function applyBionic() {
+        document.querySelectorAll(BIONIC_SELECTORS).forEach(walkAndWrap);
+      }
+
+      function removeBionic() {
+        document.querySelectorAll('.bionic-wrap').forEach(span => {
+          const parent = span.parentNode;
+          // Replace with original concatenated text
+          parent.replaceChild(document.createTextNode(span.textContent), span);
+          parent.normalize();
+        });
+        document.querySelectorAll('[data-bionic-done]').forEach(el => { delete el.dataset.bionicDone; });
+      }
+
       let stored = null;
       try { stored = localStorage.getItem('readable-font'); } catch (e) {}
       if (stored === 'on') {
         document.body.classList.add('readable-font');
         btn.setAttribute('aria-pressed', 'true');
+        applyBionic();
       }
       btn.addEventListener('click', () => {
         const on = document.body.classList.toggle('readable-font');
         btn.setAttribute('aria-pressed', on ? 'true' : 'false');
         try { localStorage.setItem('readable-font', on ? 'on' : 'off'); } catch (e) {}
+        if (on) applyBionic(); else removeBionic();
       });
     })();
   </script>
