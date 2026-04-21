@@ -7,12 +7,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <title>Mandy Hathaway — AI Ethics &amp; Technology Specialist, Technical Writer</title>
+  <title>Mandy Hathaway · AI Ethics &amp; Technology Specialist, Technical Writer</title>
   <meta name="description" content="Mandy Hathaway is an AI ethics and technology specialist and technical writer with an MA in Ethical Technology & Artificial Intelligence. Published on AI bias and algorithmic accountability. Available for remote roles in AI/ML, technical writing, AI ethics consulting, and responsible AI." />
   <meta name="keywords" content="AI ethics specialist, technical writer, curriculum designer, instructional design, AI safety, responsible AI, machine learning, NLP, prompt engineering, RLHF, LLM fine-tuning, large language models, generative AI, deep learning, documentation, information literacy, science writing, AI bias, algorithmic accountability, Python, PyTorch, Hugging Face, remote, College Station TX" />
   <meta name="author" content="Mandy Hathaway" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Mandy Hathaway — AI Ethics &amp; Technology Specialist, Technical Writer" />
+  <meta property="og:title" content="Mandy Hathaway · AI Ethics &amp; Technology Specialist, Technical Writer" />
   <meta property="og:description" content="AI ethics and technology specialist and technical writer with an MA in Ethical Technology & AI. Published on algorithmic bias and responsible AI. Available for remote roles in AI/ML, technical writing, and AI ethics consulting." />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="http://mandyhathaway.com/" />
@@ -53,7 +53,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -67,6 +67,65 @@
     }
     html { scroll-behavior: smooth; }
     body { background: var(--paper); color: var(--ink); font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+
+    /* READING MODE (Lexend, research-backed for ADHD/dyslexia/autism readers) */
+    body.readable-font,
+    body.readable-font p,
+    body.readable-font h1,
+    body.readable-font h2,
+    body.readable-font h3,
+    body.readable-font h4,
+    body.readable-font li,
+    body.readable-font a,
+    body.readable-font span,
+    body.readable-font blockquote,
+    body.readable-font label,
+    body.readable-font input,
+    body.readable-font textarea,
+    body.readable-font button,
+    body.readable-font .testimonial-text,
+    body.readable-font .hero-quote,
+    body.readable-font .tagline,
+    body.readable-font .skill-badge,
+    body.readable-font .card-type,
+    body.readable-font .article-date,
+    body.readable-font .article-pub,
+    body.readable-font .service-num,
+    body.readable-font .service-scope,
+    body.readable-font .skills-label,
+    body.readable-font .testimonial-strip-header,
+    body.readable-font .testimonial-attribution,
+    body.readable-font .testimonial-role,
+    body.readable-font .dateline,
+    body.readable-font nav a,
+    body.readable-font footer p { font-family: 'Lexend', 'Libre Baskerville', Georgia, serif !important; }
+    body.readable-font { line-height: 1.9; letter-spacing: 0.015em; font-weight: 500; }
+    body.readable-font p, body.readable-font li, body.readable-font blockquote, body.readable-font .testimonial-text, body.readable-font .hero-quote, body.readable-font .hero-bio { font-weight: 500 !important; }
+    body.readable-font h1, body.readable-font h2, body.readable-font h3, body.readable-font h4, body.readable-font .testimonial-attribution, body.readable-font .card-type, body.readable-font .skill-badge.highlight { font-weight: 700 !important; }
+    body.readable-font .masthead-name h1 { font-weight: 800 !important; letter-spacing: -0.01em; }
+    body.readable-font .masthead-name h1 em { font-weight: 600 !important; font-style: normal; }
+    body.readable-font .contact-left h2 em { font-style: normal; }
+
+    /* SKIP LINK for keyboard users */
+    .skip-link { position: absolute; left: -10000px; top: 0; background: var(--ink); color: var(--paper); padding: 0.8rem 1.2rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; z-index: 10000; }
+    .skip-link:focus { left: 0.5rem; top: 0.5rem; outline: 3px solid var(--accent2); }
+
+    /* UNIVERSAL FOCUS OUTLINE for keyboard navigation */
+    *:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      html { scroll-behavior: auto; }
+      .testimonial-slides { transition: none !important; }
+    }
+
+    /* A11Y TOGGLE BUTTON (fixed top-right for easy discovery) */
+    .a11y-toggle { position: fixed; top: 0.8rem; right: 0.8rem; z-index: 999; background: var(--paper); border: 1px solid var(--muted); color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.45rem 0.85rem; cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .a11y-toggle:hover { border-color: var(--accent); color: var(--accent); }
+    .a11y-toggle[aria-pressed="true"] { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+    @media (max-width: 600px) { .a11y-toggle { top: 0.5rem; right: 0.5rem; font-size: 0.55rem; padding: 0.35rem 0.65rem; } }
+
     header { border-bottom: 3px double var(--ink); padding: 0 5vw; }
     .dateline { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
     .masthead-name { text-align: center; padding: 2.5rem 0 1.8rem; }
@@ -174,7 +233,7 @@
     .testimonial-text { font-family: 'Libre Baskerville', serif; font-size: 0.95rem; line-height: 1.85; color: var(--ink); padding-top: 1.5rem; font-style: italic; }
     .testimonial-attribution { margin-top: 1.4rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
     .testimonial-role { display: block; color: var(--muted); margin-top: 0.2rem; }
-    .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1.5rem; }
+    .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1.5rem; flex-wrap: wrap; }
     .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rule); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
     .carousel-dot.active { background: var(--accent); }
     .carousel-arrow { background: none; border: 1px solid var(--rule); color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.8rem; width: 32px; height: 32px; cursor: pointer; transition: border-color 0.2s, color 0.2s; display: flex; align-items: center; justify-content: center; }
@@ -201,6 +260,8 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <button type="button" class="a11y-toggle" id="readable-font-toggle" aria-pressed="false" aria-label="Toggle Lexend reading mode, a font designed for ADHD and dyslexia readers">Reading Mode</button>
   <header>
     <div class="dateline">
       <span>Work &amp; Writing</span>
@@ -246,19 +307,20 @@
   </nav>
   <div class="social-bar">
     <a href="https://www.linkedin.com/in/mandyhathaway/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       LinkedIn
     </a>
     <a href="https://github.com/mandyhathaway" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
       GitHub
     </a>
     <a href="https://huggingface.co/philosophyFire" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 5.5c.276 0 .5.224.5.5s-.224.5-.5.5S11 6.276 11 6s.224-.5.5-.5zm1 0c.276 0 .5.224.5.5s-.224.5-.5.5-.5-.224-.5-.5.224-.5.5-.5zm-5 4C8.328 9.5 9 10.172 9 11s-.672 1.5-1.5 1.5S6 11.828 6 11s.672-1.5 1.5-1.5zm9 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5S15 11.828 15 11s.672-1.5 1.5-1.5zm-9 6.5h9s-.5 3-4.5 3-4.5-3-4.5-3z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 5.5c.276 0 .5.224.5.5s-.224.5-.5.5S11 6.276 11 6s.224-.5.5-.5zm1 0c.276 0 .5.224.5.5s-.224.5-.5.5-.5-.224-.5-.5.224-.5.5-.5zm-5 4C8.328 9.5 9 10.172 9 11s-.672 1.5-1.5 1.5S6 11.828 6 11s.672-1.5 1.5-1.5zm9 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5S15 11.828 15 11s.672-1.5 1.5-1.5zm-9 6.5h9s-.5 3-4.5 3-4.5-3-4.5-3z"/></svg>
       Hugging Face
     </a>
   </div>
 
+  <main id="main-content">
   <!-- ABOUT -->
   <section id="about" class="hero">
     <div class="hero-left">
@@ -267,12 +329,12 @@
       </blockquote>
       <img src="images/headshot.jpg" alt="Mandy Hathaway" style="width:100%; max-width:320px; display:block; margin:0 auto; border: 1px solid var(--rule);">
     </div>
-    <div class="hero-rule"></div>
+    <div class="hero-rule" aria-hidden="true"></div>
     <div class="hero-bio">
       <p>I'm Mandy Hathaway, an AI ethics consultant and technical writer. Organizations hire me when they need someone who understands how these systems actually work and can communicate that clearly: to leadership, to regulators, to the public, or to their own teams. I hold an MA in Ethical Technology &amp; Artificial Intelligence from Metropolitan State University and 30 years of hands-on technology experience.</p>
       <p>My work sits at the edge where machine learning meets communication and accountability. I advise on responsible AI practices, write documentation that reflects how these systems actually work, and identify the ethical questions that get skipped when moving fast.</p>
       <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor for three years. I've published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do.</p>
-      <p>I consult and write remotely ~ AI ethics advisory, AI product consulting, technical writing for AI/ML products, prompt engineering, conversational design, and responsible AI documentation.</p>
+      <p>I consult and write remotely: AI ethics advisory, AI product consulting, technical writing for AI/ML products, prompt engineering, conversational design, and responsible AI documentation.</p>
       <p class="skills-label">Core Expertise</p>
       <div class="skills-strip">
         <span class="skill-badge highlight">AI Ethics</span>
@@ -308,6 +370,7 @@
       <div class="skills-strip">
         <span class="skill-badge highlight">Women in AI Ethics (WAIE)</span>
         <span class="skill-badge highlight">Women Innovators in Tech (WIT)</span>
+        <span class="skill-badge highlight">Women Defining AI</span>
       </div>
       <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.8rem;">
         <a href="#contact" class="hire-btn">Get in Touch</a>
@@ -349,54 +412,70 @@
   <!-- TESTIMONIALS -->
   <div class="testimonial-strip">
     <div class="testimonial-strip-header">What People Say</div>
-    <div class="testimonial-carousel" id="testimonial-carousel">
+    <div class="testimonial-carousel" id="testimonial-carousel" aria-roledescription="carousel" aria-label="Client testimonials">
       <div class="testimonial-track">
         <div class="testimonial-slides" id="testimonial-slides">
-          <div class="testimonial-card">
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="1 of 7">
             <p class="testimonial-text">Mandy's work occupies a rare intersection of philosophical precision and technical depth. In my research on AI therapy tools, her analysis was precise enough to stand alongside peer-reviewed academic literature, which is exactly how I cited it. She writes about AI the way it should be written about: carefully, honestly, and without the hype.</p>
             <div class="testimonial-attribution">
               Veronica Fuentes
               <span class="testimonial-role">Researcher &nbsp;·&nbsp; University of North Texas</span>
             </div>
           </div>
-          <div class="testimonial-card">
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="2 of 7">
             <p class="testimonial-text">I have known Mandy for over 20 years and I have never met anyone with more dedication and drive. What sets her apart is how easily she can learn something new and explain the concepts of any subject as if she had been doing it all her life. From photography to Artificial Intelligence, her ability to master a subject is truly astonishing. She can take a technical subject and create a learning environment that not only teaches, but inspires others to excel.</p>
             <div class="testimonial-attribution">
               Mark Bolla
               <span class="testimonial-role">Senior Electrical Engineer</span>
             </div>
           </div>
-          <div class="testimonial-card">
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="3 of 7">
             <p class="testimonial-text">Mandy worked incredibly hard for Pillsbury United Communities serving on their IT committee, developing curricula, and technical user manuals for their technology literacy programming. Mandy had a special knack for making people feel comfortable and express real challenges to get to the root of situations.</p>
             <div class="testimonial-attribution">
               Joel Krogstad
               <span class="testimonial-role">Neuroscience Program Manager &nbsp;·&nbsp; Pillsbury United Communities</span>
             </div>
           </div>
-          <div class="testimonial-card">
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="4 of 7">
             <p class="testimonial-text">Mandy's patience and care has blown me away after years of knowing teachers who hold masters degrees in the 'special education' field. Mandy uses individualized curriculum to best suit her students for success. If you're in search of someone who puts immense amounts of thought and kindness into the classroom, Mandy is the one to call.</p>
             <div class="testimonial-attribution">
               Corrine Matlak
               <span class="testimonial-role">Producer, Location Scout &amp; Manager &nbsp;·&nbsp; CWK Teaching Client</span>
             </div>
           </div>
-          <div class="testimonial-card">
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="5 of 7">
             <p class="testimonial-text">Mandy is one of those rare professionals who brings both deep expertise and genuine care into everything she does. She is an exceptional problem solver, quick, thoughtful, and always able to break down complex challenges into clear, manageable steps. What stood out most was her ability to translate those solutions into bite-sized, accessible learning moments for students, meeting them exactly where they were while still pushing them to grow. This skill translates to working with adults and getting to the root of any challenge that comes her way with grace and speed.</p>
             <div class="testimonial-attribution">
               Lauren Casserly
               <span class="testimonial-role">Coding with Kids</span>
             </div>
           </div>
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="6 of 7">
+            <p class="testimonial-text">Mandy is incredibly reliable and able to grasp complex documentation needs immediately. Highly recommend.</p>
+            <div class="testimonial-attribution">
+              Lara Kline
+              <span class="testimonial-role">Creative Strategist &nbsp;·&nbsp; Upwork Client, Conversational Design Documentation</span>
+            </div>
+          </div>
+          <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="7 of 7">
+            <p class="testimonial-text">Mandy is bright, capable, and willing to jump in and get things done for her clients. She is thoughtful and genuine and has the ability to put the people she works with at ease to better address challenges and find solutions to problems big and small. Mandy has technical expertise, but is able to take complex concepts and information and break them down for any audience. Mandy knows her stuff, works hard, and always shows up professionally with a problem-solver's attitude.</p>
+            <div class="testimonial-attribution">
+              Libby Caulum
+              <span class="testimonial-role">Chief Executive Officer &nbsp;·&nbsp; MNsure</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="carousel-controls">
-        <button class="carousel-arrow" id="t-prev" aria-label="Previous">&#8592;</button>
-        <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
-        <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
-        <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
-        <button class="carousel-dot" data-idx="3" aria-label="Slide 4"></button>
-        <button class="carousel-dot" data-idx="4" aria-label="Slide 5"></button>
-        <button class="carousel-arrow" id="t-next" aria-label="Next">&#8594;</button>
+        <button class="carousel-arrow" id="t-prev" aria-label="Previous testimonial">&#8592;</button>
+        <button class="carousel-dot active" data-idx="0" aria-label="Testimonial 1"></button>
+        <button class="carousel-dot" data-idx="1" aria-label="Testimonial 2"></button>
+        <button class="carousel-dot" data-idx="2" aria-label="Testimonial 3"></button>
+        <button class="carousel-dot" data-idx="3" aria-label="Testimonial 4"></button>
+        <button class="carousel-dot" data-idx="4" aria-label="Testimonial 5"></button>
+        <button class="carousel-dot" data-idx="5" aria-label="Testimonial 6"></button>
+        <button class="carousel-dot" data-idx="6" aria-label="Testimonial 7"></button>
+        <button class="carousel-arrow" id="t-next" aria-label="Next testimonial">&#8594;</button>
       </div>
     </div>
   </div>
@@ -404,13 +483,13 @@
   <!-- AI ETHICS -->
   <section id="ai-ethics">
     <div class="section-header">
-      <span class="section-num">02</span>
+      <span class="section-num">01</span>
       <div class="rule-line"></div>
       <h2>AI Ethics</h2>
       <div class="rule-line"></div>
     </div>
     <div class="ethics-intro">
-      <p>I write and think critically about the human dimensions of artificial intelligence — from bias and accountability to how we design systems that are genuinely equitable. Below is a selection of essays, research, and public writing on these questions.</p>
+      <p>I write and think critically about the human dimensions of artificial intelligence, from bias and accountability to how we design systems that are genuinely equitable. Below is a selection of essays, research, and public writing on these questions.</p>
     </div>
 
     <!-- FEATURED -->
@@ -418,7 +497,7 @@
       <div class="ethics-featured" style="margin: 0;">
         <div class="ethics-tag">Featured Essay</div>
         <h3>The Bias We're Building In</h3>
-        <p>AI systems don't generate bias from nowhere — they learn it from us. This essay traces how racial and gender inequity becomes encoded in machine learning systems, why removing sensitive variables isn't enough, and what it actually takes to build systems that don't perpetuate the injustices they inherit.</p>
+        <p>AI systems don't generate bias from nowhere. They learn it from us. This essay traces how racial and gender inequity becomes encoded in machine learning systems, why removing sensitive variables isn't enough, and what it actually takes to build systems that don't perpetuate the injustices they inherit.</p>
         <a href="samples/AI_Ethics_Essay_Final.pdf" class="ethics-link" target="_blank">Read the Essay (PDF) &rarr;</a>
       </div>
       <div class="ethics-featured" style="margin: 0;">
@@ -436,7 +515,7 @@
         <div class="article-date">2020</div>
         <div class="article-body">
           <h3>We Built the Monster We're Afraid Of</h3>
-          <p>Why fears of AI apocalypse say more about human psychology than AI capability — and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
+          <p>Why fears of AI apocalypse say more about human psychology than AI capability, and why that matters for the risks that are already here. An examination of anthropomorphism, the Singularity myth, and whose psychology we're really projecting onto our machines.</p>
           <a href="samples/Anthropomorphism_Essay_Final.pdf" class="ethics-link" target="_blank">Read Essay (PDF) &rarr;</a>
         </div>
         <div class="article-pub">AI Ethics</div>
@@ -455,7 +534,7 @@
   <!-- TECHNICAL WRITING -->
   <section id="writing">
     <div class="section-header">
-      <span class="section-num">01</span>
+      <span class="section-num">02</span>
       <div class="rule-line"></div>
       <h2>Technical Writing &amp; Curriculum</h2>
       <div class="rule-line"></div>
@@ -500,7 +579,7 @@
       <div class="writing-card">
         <div class="card-type">Instructional Design</div>
         <h3>Build an Image Generation Model</h3>
-        <p>An advanced K&ndash;12 lesson in which students build a working Stable Diffusion pipeline from scratch using PyTorch, StableDiffusers, and Google Colab&rsquo;s free GPU. Covers GPU configuration, model loading, prompt engineering, and an optional Gradio web interface extension.</p>
+        <p>An advanced K to 12 lesson in which students build a working Stable Diffusion pipeline from scratch using PyTorch, StableDiffusers, and Google Colab&rsquo;s free GPU. Covers GPU configuration, model loading, prompt engineering, and an optional Gradio web interface extension.</p>
         <a href="samples/Build_an_Image_Generation_Model_Hathaway.pdf" class="card-link" target="_blank">Instructor Guide (PDF) &rarr;</a>
         &nbsp;&nbsp;
         <a href="https://github.com/mandyhathaway/ImageGeneratorforStudents" class="card-link" target="_blank">GitHub Repo &rarr;</a>
@@ -514,7 +593,7 @@
       <div class="writing-card">
         <div class="card-type">Curriculum Design</div>
         <h3>Probabilities and Confidence</h3>
-        <p>A complete K&ndash;12 AI lesson connecting core probability math to machine learning. Students learn that every AI prediction is rooted in probability, explore how models express certainty through confidence scores, and build a live image classifier using Google&rsquo;s Teachable Machine. Includes full instructor guide and student-facing presentation deck.</p>
+        <p>A complete K to 12 AI lesson connecting core probability math to machine learning. Students learn that every AI prediction is rooted in probability, explore how models express certainty through confidence scores, and build a live image classifier using Google&rsquo;s Teachable Machine. Includes full instructor guide and student-facing presentation deck.</p>
         <a href="samples/Probabilities_and_Confidence_Hathaway.pdf" class="card-link" target="_blank">Instructor Guide (PDF) &rarr;</a>
         &nbsp;&nbsp;
         <a href="samples/Probabilities_and_Confidence_Hathaway.pptx" class="card-link" target="_blank">Presentation (PPTX) &rarr;</a>
@@ -543,8 +622,27 @@
       <div class="article-row">
         <div class="article-date">2020</div>
         <div class="article-body">
+          <h3>Data versus Lore: An Introduction to the Technology Behind Artificial Intelligence</h3>
+          <p>The opening piece in the series. A plain-language introduction to what AI actually is, the difference between narrow, general, and super intelligence, and how machine learning and neural networks work underneath the hype.</p>
+          <a href="samples/Data_versus_Lore_Part_1_Hathaway.pdf" class="article-link" target="_blank">Read PDF &rarr;</a>
+        </div>
+        <div class="article-pub">The Metropolitan</div>
+      </div>
+      <div class="article-row">
+        <div class="article-date">2020</div>
+        <div class="article-body">
           <h3>Data versus Lore: An Introduction to Current Artificial Intelligence and Its Applications</h3>
           <p>An accessible introduction to how modern AI systems actually work, what they can do, and where the hype outpaces the reality.</p>
+          <a href="samples/Data_versus_Lore_Part_2_Hathaway.pdf" class="article-link" target="_blank">Read PDF &rarr;</a>
+        </div>
+        <div class="article-pub">The Metropolitan</div>
+      </div>
+      <div class="article-row">
+        <div class="article-date">2020</div>
+        <div class="article-body">
+          <h3>Data versus Lore: An Introduction to the Ethical Concerns Surrounding Artificial Intelligence</h3>
+          <p>A look at the real risks tied to AI: privacy and surveillance, job displacement, and the way biased training data produces biased systems. Includes practical strategies for integrating the technology responsibly.</p>
+          <a href="samples/Data_versus_Lore_Part_3_Hathaway.pdf" class="article-link" target="_blank">Read PDF &rarr;</a>
         </div>
         <div class="article-pub">The Metropolitan</div>
       </div>
@@ -552,17 +650,10 @@
         <div class="article-date">2020</div>
         <div class="article-body">
           <h3>Data versus Lore: The Past and the Future of Artificial Intelligence</h3>
-          <p>The concluding installment of the series — tracing where AI has come from and where it is most likely, and least likely, to go.</p>
+          <p>The concluding installment of the series, tracing where AI has come from and where it is most likely, and least likely, to go. Covers current trends in medical research, automation, weapons, and data collection.</p>
+          <a href="samples/Data_versus_Lore_Part_4_Hathaway.pdf" class="article-link" target="_blank">Read PDF &rarr;</a>
         </div>
         <div class="article-pub">The Metropolitan</div>
-      </div>
-      <div class="article-row">
-        <div class="article-date"></div>
-        <div class="article-body">
-          <h3>More articles coming soon</h3>
-          <p>Additional journalism and public writing will be added here.</p>
-        </div>
-        <div class="article-pub"></div>
       </div>
     </div>
   </section>
@@ -581,7 +672,7 @@
         <img src="images/FB_IMG_1771487184104.jpg" alt="BLM protest at Minnesota State Capitol, 2020" style="object-position:center 100%;">
       </div>
       <div class="photo-cell">
-        <img src="images/Vice and Virtue 2.jpg" alt="Vice and Virtue — opioid crisis editorial">
+        <img src="images/Vice and Virtue 2.jpg" alt="Vice and Virtue, opioid crisis editorial">
       </div>
       <div class="photo-cell">
         <img src="images/DSC_0049 TWO.jpg" alt="Kyrgyz man outside his yurt, Central Asia">
@@ -630,14 +721,15 @@
       </form>
     </div>
   </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Mandy Hathaway. All Rights Reserved.</p>
     <p>AI Ethics Consultant &amp; Technology Specialist · Technical Writer · Journalist</p>
   </footer>
 
-  <div class="lightbox-overlay" id="lightbox">
-    <span class="lightbox-close" id="lightbox-close">&#x2715;</span>
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-label="Photo viewer" aria-hidden="true">
+    <span class="lightbox-close" id="lightbox-close" role="button" tabindex="0" aria-label="Close photo viewer">&#x2715;</span>
     <img src="" alt="" id="lightbox-img">
   </div>
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -650,22 +742,27 @@
         lbImg.src = img.src;
         lbImg.alt = img.alt;
         overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
       });
     });
     function closeLightbox() {
       overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
     lbClose.addEventListener('click', closeLightbox);
+    lbClose.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); closeLightbox(); } });
     overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
   <script>
-    // TESTIMONIAL CAROUSEL
+    // TESTIMONIAL CAROUSEL (keyboard-accessible, respects reduced-motion)
     (function() {
       const slides = document.getElementById('testimonial-slides');
       const dots = document.querySelectorAll('.carousel-dot');
+      const carousel = document.getElementById('testimonial-carousel');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let current = 0;
       let timer;
 
@@ -679,20 +776,42 @@
       function next() { goTo(current + 1); }
       function prev() { goTo(current - 1); }
 
-      function resetTimer() {
+      function startTimer() {
+        if (reducedMotion) return;
         clearInterval(timer);
-        timer = setInterval(next, 6000);
+        timer = setInterval(next, 18000);
       }
+      function stopTimer() { clearInterval(timer); }
 
-      document.getElementById('t-next').addEventListener('click', () => { next(); resetTimer(); });
-      document.getElementById('t-prev').addEventListener('click', () => { prev(); resetTimer(); });
-      dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.idx); resetTimer(); }));
+      document.getElementById('t-next').addEventListener('click', () => { next(); startTimer(); });
+      document.getElementById('t-prev').addEventListener('click', () => { prev(); startTimer(); });
+      dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.idx); startTimer(); }));
 
-      const carousel = document.getElementById('testimonial-carousel');
-      carousel.addEventListener('mouseenter', () => clearInterval(timer));
-      carousel.addEventListener('mouseleave', resetTimer);
+      // Pause on hover and on keyboard focus
+      carousel.addEventListener('mouseenter', stopTimer);
+      carousel.addEventListener('mouseleave', startTimer);
+      carousel.addEventListener('focusin', stopTimer);
+      carousel.addEventListener('focusout', startTimer);
 
-      resetTimer();
+      startTimer();
+    })();
+  </script>
+  <script>
+    // READABLE FONT TOGGLE (Lexend, persisted via localStorage)
+    (function() {
+      const btn = document.getElementById('readable-font-toggle');
+      if (!btn) return;
+      let stored = null;
+      try { stored = localStorage.getItem('readable-font'); } catch (e) {}
+      if (stored === 'on') {
+        document.body.classList.add('readable-font');
+        btn.setAttribute('aria-pressed', 'true');
+      }
+      btn.addEventListener('click', () => {
+        const on = document.body.classList.toggle('readable-font');
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        try { localStorage.setItem('readable-font', on ? 'on' : 'off'); } catch (e) {}
+      });
     })();
   </script>
 </body>
