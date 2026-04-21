@@ -1,0 +1,50 @@
+# Mandy Hathaway
+
+> AI ethics consultant, technology specialist, and technical writer. Available for remote consulting engagements and senior roles in AI ethics advisory, AI product consulting, AI ethics work with nonprofits and mission driven organizations, technical writing for AI and ML products, AI literacy curriculum, and responsible AI documentation.
+
+Mandy Hathaway holds an MA in Ethical Technology and Artificial Intelligence from Metropolitan State University and has thirty years of hands on technology experience. Her work sits at the intersection of machine learning, communication, and accountability. Published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do. Credentialed through the AI for Nonprofits Professional Certificate (Microsoft Elevate, LinkedIn, and NetHope). Based in College Station, Texas. Past client and employer list includes Coding With Kids, The Metropolitan, and Pillsbury United Communities.
+
+## Services
+
+- [AI Product Consulting](https://mandyhathaway.com/#services): Policy review, bias and fairness audits, AI governance frameworks, conversational agent design, ethics training for non technical teams.
+- [Technical Writing and Documentation](https://mandyhathaway.com/#services): API references, user guides, developer tutorials, prompt engineering libraries, internal knowledge bases for AI and ML products.
+- [AI Literacy and Curriculum](https://mandyhathaway.com/#services): Curriculum design, executive briefings, staff training, plain language explainers and briefing documents for leadership and board audiences.
+- [AI Ethics for Nonprofits](https://mandyhathaway.com/#services): Tool vetting, board ready policy, data stewardship, staff training, and mission risk review for mission driven organizations.
+
+## Featured Work
+
+- [The Bias We're Building](https://mandyhathaway.com/samples/AI_Ethics_Essay_Final.pdf): Essay tracing how racial and gender inequity are encoded in machine learning systems and what it takes to build systems that do not perpetuate inherited injustices.
+- [AI Ethics Preference Annotation Dataset](https://huggingface.co/datasets/philosophyFire/Ai_ethics_dataset): A human annotated RLHF preference dataset examining well calibrated AI responses across six failure mode categories. 95 prompts, 190 response pairs, five scoring dimensions.
+- [AI Ethics Annotation Documentation](https://mandyhathaway.com/samples/AI_Ethics_Annotation_Dataset_Hathaway.pdf): Full annotation methodology document for the preference dataset.
+- [We Built the Monster We're Afraid Of](https://mandyhathaway.com/samples/Anthropomorphism_Essay_Final.pdf): Why fears of AI apocalypse say more about human psychology than AI capability.
+- [How We Write About AI](https://mandyhathaway.com/samples/Style_Guide_Sample.pdf): Plain language style guide for writers, editors, and product teams communicating about AI systems to non specialist audiences.
+
+## Technical Writing Portfolio
+
+- [Prompt Engineering Library](https://mandyhathaway.com/samples/Prompt_Engineering_Library_Hathaway.pdf): Structured reference library of prompts for classification, summarization, content moderation, structured output, and edge case handling.
+- [How Artificial Intelligence Actually Works](https://mandyhathaway.com/samples/Technical_Explainer_Final.pdf): Plain language technical explainer for non specialist audiences.
+- [How to Run a Local LLM with Ollama](https://mandyhathaway.com/samples/Ollama_User_Guide.pdf): Practical user guide for running large language models locally.
+- [How to Host a Static Site on GitHub Pages](https://mandyhathaway.com/samples/GitHub_Pages_Installation_Guide.pdf): Installation guide for developers and technical writers.
+- [How to Use the Anthropic SDK in Your Python Workflow](https://gist.github.com/mandyhathaway/f5207123af520d509ede55d9a939dc93): Developer tutorial covering setup, authentication, and mid project use cases.
+
+## Curriculum and Instructional Design
+
+- [Build an Image Generation Model](https://mandyhathaway.com/samples/Build_an_Image_Generation_Model_Hathaway.pdf): Advanced K to 12 lesson building a Stable Diffusion pipeline from scratch in PyTorch, with accompanying GitHub repo at [ImageGeneratorforStudents](https://github.com/mandyhathaway/ImageGeneratorforStudents).
+- [Probabilities and Confidence](https://mandyhathaway.com/samples/Probabilities_and_Confidence_Hathaway.pdf): Complete K to 12 AI lesson connecting probability math to machine learning, with instructor guide and student deck.
+- [Root Cause Analysis: Content Moderation Model Drift](https://mandyhathaway.com/samples/RCA_Hathaway.pdf): Fictional post mortem tracing how satire content in a training dataset caused a false positive spike.
+
+## Journalism
+
+- [Tools for Trusting Information in a World of Information Overload](https://mandyhathaway.com/samples/Information_Literacy_Hathaway_v2.pdf): Practical guide to source evaluation, fact checking, and logical fallacies used to mislead careful readers. Published in The Metropolitan, 2021.
+- [Data versus Lore, Part 1: An Introduction to the Technology Behind AI](https://mandyhathaway.com/samples/Data_versus_Lore_Part_1_Hathaway.pdf): Published in The Metropolitan, 2020.
+- [Data versus Lore, Part 2: Current AI and Its Applications](https://mandyhathaway.com/samples/Data_versus_Lore_Part_2_Hathaway.pdf): Published in The Metropolitan, 2020.
+- [Data versus Lore, Part 3: Ethical Concerns Surrounding AI](https://mandyhathaway.com/samples/Data_versus_Lore_Part_3_Hathaway.pdf): Published in The Metropolitan, 2020.
+- [Data versus Lore, Part 4: The Past and Future of AI](https://mandyhathaway.com/samples/Data_versus_Lore_Part_4_Hathaway.pdf): Published in The Metropolitan, 2020.
+
+## Contact
+
+- [Book a Call](https://calendly.com/mandyhathaway): Free fifteen minute intro calls available for nonprofits and small businesses.
+- [Email](mailto:hathaway.mandyl@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/mandyhathaway/)
+- [GitHub](https://github.com/mandyhathaway)
+- [Hugging Face](https://huggingface.co/philosophyFire)
