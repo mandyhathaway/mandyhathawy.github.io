@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <title>Mandy Hathaway · AI Ethics &amp; Technology Specialist, Technical Writer</title>
-  <meta name="description" content="Mandy Hathaway is an AI ethics and technology specialist and technical writer with an MA in Ethical Technology & Artificial Intelligence. Published on AI bias and algorithmic accountability. Available for remote roles in AI/ML, technical writing, AI ethics consulting, and responsible AI." />
+  <meta name="description" content="Mandy Hathaway is an AI ethics consultant, technology specialist, and technical writer with an MA in Ethical Technology & Artificial Intelligence. AI systems and evaluation, AI automation and tooling, technical writing, AI literacy, AI ethics for nonprofits, and fractional AI ethics advisory retainers." />
   <meta name="keywords" content="AI ethics specialist, technical writer, curriculum designer, instructional design, AI safety, responsible AI, machine learning, NLP, prompt engineering, RLHF, LLM fine-tuning, large language models, generative AI, deep learning, documentation, information literacy, science writing, AI bias, algorithmic accountability, Python, PyTorch, Hugging Face, remote, College Station TX" />
   <meta name="author" content="Mandy Hathaway" />
   <meta name="robots" content="index, follow" />
@@ -24,11 +24,12 @@
     "url": "http://mandyhathaway.com",
     "email": "hathaway.mandyl@gmail.com",
     "jobTitle": ["AI Ethics Consultant", "AI Ethics & Technology Specialist", "Technical Writer", "Journalist", "Technology Editor"],
-    "description": "AI ethics and technology specialist and technical writer with an MA in Ethical Technology & Artificial Intelligence from Metropolitan State University. Published on AI bias, algorithmic accountability, and responsible AI development. Specializes in machine learning, LLM fine-tuning, RLHF, prompt engineering, AI ethics consulting, and making complex AI concepts accessible to non-specialist audiences.",
+    "description": "AI ethics consultant, technology specialist, and technical writer with an MA in Ethical Technology & Artificial Intelligence from Metropolitan State University. Published on AI bias, algorithmic accountability, and responsible AI development. Offers six service lines: AI systems and evaluation (RLHF dataset design, annotation methodology, model evaluation, bias audits, governance), AI automation and tooling (workflow automation, Claude plugins, MCP servers, memory and skill architectures), technical writing and documentation for AI and ML products, AI literacy and curriculum, AI ethics advisory for nonprofits, and fractional AI ethics advisor retainers. Free fifteen minute intro calls available via Calendly at calendly.com/mandyhathaway.",
     "knowsAbout": [
       "Artificial Intelligence", "Machine Learning", "Natural Language Processing", "Large Language Models", "Generative AI", "Deep Learning", "Neural Networks", "Computer Vision",
       "AI Ethics", "AI Safety", "Responsible AI", "Algorithmic Accountability", "AI Bias", "AI Governance",
-      "Prompt Engineering", "RLHF", "LLM Fine-tuning", "Hugging Face",
+      "Prompt Engineering", "RLHF", "LLM Fine-tuning", "DPO", "Hugging Face", "Annotation Methodology", "Preference Datasets", "Model Evaluation",
+      "MCP", "Model Context Protocol", "Claude Plugins", "AI Workflow Automation", "Conversational Agent Design",
       "Technical Writing", "Curriculum Design", "Instructional Design", "Documentation", "Information Literacy", "Science Writing",
       "Python", "PyTorch", "JavaScript", "Linux", "NumPy", "Pandas", "Matplotlib", "Git",
       "Data Visualization", "Data Analytics", "Object-Oriented Programming", "Web Development", "Markdown", "AsciiDoc", "Postman"
@@ -47,6 +48,10 @@
       { "@type": "EducationalOccupationalCredential", "name": "Lightweight AI with Small Language Models", "credentialCategory": "certificate", "recognizedBy": { "@type": "Organization", "name": "LinkedIn" } }
     ],
     "sameAs": ["https://www.linkedin.com/in/mandyhathaway", "https://github.com/mandyhathaway", "https://huggingface.co/philosophyFire"],
+    "contactPoint": [
+      { "@type": "ContactPoint", "contactType": "booking", "url": "https://calendly.com/mandyhathaway", "description": "Free fifteen minute intro call for nonprofits and small businesses" },
+      { "@type": "ContactPoint", "contactType": "customer service", "email": "hathaway.mandyl@gmail.com" }
+    ],
     "workLocation": { "@type": "Place", "name": "Remote" },
     "address": { "@type": "PostalAddress", "addressLocality": "College Station", "addressRegion": "TX", "addressCountry": "US" }
   }
@@ -138,9 +143,11 @@
     .masthead-name h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
     .tagline { margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
     nav { border-top: 1px solid var(--rule); border-bottom: 3px double var(--ink); padding: 0 5vw; }
-    nav ul { display: flex; justify-content: center; gap: 2.5rem; list-style: none; padding: 0.8rem 0; flex-wrap: wrap; }
+    nav ul { display: flex; justify-content: center; align-items: center; gap: 2.5rem; list-style: none; padding: 0.8rem 0; flex-wrap: wrap; }
     nav a { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--ink); transition: color 0.2s; }
     nav a:hover { color: var(--accent); }
+    nav a.nav-cta { background: var(--accent); color: var(--paper); padding: 0.55rem 1rem; border-radius: 2px; letter-spacing: 0.14em; }
+    nav a.nav-cta:hover { background: var(--ink); color: var(--paper); }
     .social-bar { background: var(--cream); border-bottom: 1px solid var(--rule); padding: 0.65rem 5vw; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
     .social-bar a { display: flex; align-items: center; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color 0.2s; }
     .social-bar a:hover { color: var(--accent); }
@@ -224,7 +231,8 @@
     .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--paper); margin-bottom: 0.75rem; line-height: 1.25; }
     .service-card p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.75; }
     .service-card .service-scope { margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent2); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1rem; }
-    @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1000px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .services-grid { grid-template-columns: 1fr; } }
 
     /* TESTIMONIAL CAROUSEL */
     .testimonial-strip { background: var(--cream); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 3.5rem 5vw; }
@@ -307,6 +315,7 @@
       <li><a href="#ai-ethics">AI Ethics</a></li>
       <li><a href="#journalism">Journalism</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-cta" href="https://calendly.com/mandyhathaway" target="_blank" rel="noopener">Book a Call</a></li>
     </ul>
   </nav>
   <div class="social-bar">
@@ -337,7 +346,7 @@
     <div class="hero-bio">
       <p>I'm Mandy Hathaway, an AI ethics consultant and technical writer. Organizations hire me when they need someone who understands how these systems actually work and can communicate that clearly: to leadership, to regulators, to the public, or to their own teams. I hold an MA in Ethical Technology &amp; Artificial Intelligence from Metropolitan State University and 30 years of hands-on technology experience.</p>
       <p>My work sits at the edge where machine learning meets communication and accountability. I advise on responsible AI practices, write documentation that reflects how these systems actually work, and identify the ethical questions that get skipped when moving fast.</p>
-      <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor for three years. I've published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do.</p>
+      <p>Past clients and employers include Coding With Kids, where I led a teaching team of up to 35 instructors, and <em>The Metropolitan</em>, where I served as Technology Editor for three years. Earlier in my career, I served at Pillsbury United Communities through AmeriCorps CTEP (the Community Technology Empowerment Project), developing curricula and technical documentation for their technology literacy programming. I've published on algorithmic bias, responsible AI development, and the gap between how AI systems are marketed and what they can actually do.</p>
       <p>I consult and write remotely: AI ethics advisory, AI product consulting, technical writing for AI/ML products, prompt engineering, conversational design, and responsible AI documentation.</p>
       <p class="skills-label">Core Expertise</p>
       <div class="skills-strip">
@@ -394,21 +403,40 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
-        <h3>AI Product Consulting</h3>
-        <p>I work with organizations that are adopting or building AI and need to think carefully about what they're building, buying, or deploying. That includes bias and fairness audits, responsible AI policy review, AI governance frameworks, conversational agent design, and ethics training for non-technical teams. I write clearly about hard problems and I don't soften findings to make them easier to ignore.</p>
-        <div class="service-scope">Policy review &nbsp;·&nbsp; Bias audits &nbsp;·&nbsp; Agent design &nbsp;·&nbsp; Ethics training &nbsp;·&nbsp; AI governance</div>
+        <h3>AI Systems &amp; Evaluation</h3>
+        <p>I build and evaluate the pieces that make AI systems trustworthy. RLHF and preference dataset design, annotation methodology, conversational agent design, model evaluation, and responsible AI policy review. My published work includes a human annotated AI ethics preference dataset and a DPO fine tuning notebook for ethics alignment. I bring the same rigor to client systems: bias and fairness audits, governance frameworks, and ethics training for non technical teams.</p>
+        <div class="service-scope">Dataset design &nbsp;·&nbsp; RLHF annotation &nbsp;·&nbsp; Agent design &nbsp;·&nbsp; Bias audits &nbsp;·&nbsp; AI governance</div>
       </div>
       <div class="service-card">
         <div class="service-num">02</div>
+        <h3>AI Automation &amp; Tooling</h3>
+        <p>I build the infrastructure that lets small teams and solo operators put AI to real work: workflow automation, custom Claude plugins, MCP servers, scheduled task systems, and memory and skill architectures. I run my own consulting business on a system I built this way, so every piece of it is battle tested on a real workload before I hand it to a client. The same approach works for nonprofit staff drowning in repetitive intake, solo consultants who need a working second brain, and product teams building internal AI tooling.</p>
+        <div class="service-scope">Workflow automation &nbsp;·&nbsp; Claude plugins &nbsp;·&nbsp; MCP servers &nbsp;·&nbsp; Memory architecture &nbsp;·&nbsp; Staff augmentation</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
         <h3>Technical Writing &amp; Documentation</h3>
         <p>I write documentation for AI and ML products that reflects how the systems actually work: API references, user guides, developer tutorials, prompt engineering libraries, and internal knowledge bases. I know how to read a codebase, talk to engineers, and produce documentation that people actually use. No jargon for its own sake. No oversimplification that misleads.</p>
         <div class="service-scope">API docs &nbsp;·&nbsp; User guides &nbsp;·&nbsp; Developer tutorials &nbsp;·&nbsp; Style guides</div>
       </div>
       <div class="service-card">
-        <div class="service-num">03</div>
+        <div class="service-num">04</div>
         <h3>AI Literacy &amp; Curriculum</h3>
-        <p>I design and deliver AI education for audiences who need the real picture: what these systems can and can't do, where they fail, and why the failure modes matter. My courses have reached students from elementary school through professional development contexts. I can also write plain-language explainers and briefing documents for leadership and board-level audiences.</p>
+        <p>I design and deliver AI education for audiences who need the real picture: what these systems can and can't do, where they fail, and why the failure modes matter. My courses have reached students from elementary school through professional development contexts. I can also write plain language explainers and briefing documents for leadership and board level audiences.</p>
         <div class="service-scope">Curriculum design &nbsp;·&nbsp; Executive briefings &nbsp;·&nbsp; Staff training &nbsp;·&nbsp; Public explainers</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>AI Ethics for Nonprofits</h3>
+        <p>Nonprofits face AI decisions without the legal, technical, and governance staff that enterprises take for granted. I work with mission driven organizations to vet tools before adoption, write policies the board can read and the staff can follow, and flag where AI helps the mission and where it risks the people the mission exists to serve. I hold the AI for Nonprofits Professional Certificate through Microsoft Elevate, LinkedIn, and NetHope.</p>
+        <p style="margin-top: 0.9rem; font-size: 0.82rem;"><a href="samples/nonprofit_ai_guide_v11.html" target="_blank" rel="noopener" style="color: var(--accent2); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">Read the practical guide</a> <span style="color: rgba(255,255,255,0.4); margin: 0 0.4rem;">/</span> <a href="samples/nonprofit_ai_quick_reference.html" target="_blank" rel="noopener" style="color: var(--accent2); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">One page summary</a></p>
+        <div class="service-scope">Tool vetting &nbsp;·&nbsp; Board ready policy &nbsp;·&nbsp; Data stewardship &nbsp;·&nbsp; Staff training &nbsp;·&nbsp; Mission risk review</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>Fractional AI Ethics Advisor</h3>
+        <p>Some organizations need ongoing AI ethics oversight but don't have the volume to justify a full time hire. I work as a monthly retainer advisor for product teams, nonprofits, and editorial operations that want a thinking partner embedded in their decisions: reviewing launches before they ship, reading contracts with AI clauses, flagging risk early, sitting in on roadmap reviews, and keeping governance current as the laws keep shifting. A typical engagement runs four to eight hours a month with scoped access to your tools and team.</p>
+        <div class="service-scope">Monthly retainer &nbsp;·&nbsp; Launch review &nbsp;·&nbsp; Governance upkeep &nbsp;·&nbsp; Roadmap advisory &nbsp;·&nbsp; Contract review</div>
       </div>
     </div>
   </section>
@@ -444,7 +472,7 @@
             <p class="testimonial-text">Mandy's patience and care has blown me away after years of knowing teachers who hold masters degrees in the 'special education' field. Mandy uses individualized curriculum to best suit her students for success. If you're in search of someone who puts immense amounts of thought and kindness into the classroom, Mandy is the one to call.</p>
             <div class="testimonial-attribution">
               Corrine Matlak
-              <span class="testimonial-role">Producer, Location Scout &amp; Manager &nbsp;·&nbsp; Teaching Client</span>
+              <span class="testimonial-role">Producer, Location Scout &amp; Manager &nbsp;·&nbsp; CWK Teaching Client</span>
             </div>
           </div>
           <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="5 of 7">
@@ -695,7 +723,11 @@
     <div class="contact-left">
       <h2>Let's Work <em>Together</em></h2>
       <p>I take on consulting engagements and senior remote roles in AI ethics, technical writing, and AI/ML documentation. If you're building something that touches AI and need someone who can think critically about it and communicate it clearly, I'd like to hear about it.</p>
+      <p>Nonprofits and small businesses can book a free fifteen minute intro call to scope fit before committing to paid work.</p>
       <div class="contact-links">
+        <a href="https://calendly.com/mandyhathaway" target="_blank" rel="noopener">Book a Call  /  calendly.com/mandyhathaway</a>
+        <a href="samples/nonprofit_ai_guide_v11.html" target="_blank" rel="noopener">AI for Nonprofits  /  Practical Guide</a>
+        <a href="samples/nonprofit_ai_quick_reference.html" target="_blank" rel="noopener">AI for Nonprofits  /  One Page Summary</a>
         <a href="/cdn-cgi/l/email-protection#563e37223e3721372f783b3738322f3a16313b373f3a7835393b"><span class="__cf_email__" data-cfemail="3a525b4e525b4d5b4314575b545e43567a5d575b535614595557">[email&#160;protected]</span></a>
         <a href="https://www.linkedin.com/in/mandyhathaway/" target="_blank" rel="noopener">LinkedIn  /  mandyhathaway</a>
         <a href="https://github.com/mandyhathaway" target="_blank" rel="noopener">GitHub  /  mandyhathaway</a>
